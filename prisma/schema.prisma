@@ -1,0 +1,113 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  role         String   @default("EDITOR")
+  createdAt    DateTime @default(now())
+}
+
+model Project {
+  id               String   @id @default(cuid())
+  slug             String   @unique
+  client           String
+  title            String
+  year             Int
+  featured         Boolean  @default(false)
+  order            Int      @default(0)
+  status           String   @default("DRAFT")
+  disciplines      String[]
+  services         String[]
+  shortDescription String
+  heroMediaId      String?
+  hero             Media?   @relation("ProjectHero", fields: [heroMediaId], references: [id])
+  challenge        String[]
+  idea             String[]
+  whatWeDid        String[]
+  results          String[]
+  blocks           Json     @default("[]")
+  credits          Json     @default("[]")
+  related          String[]
+  seoTitle         String?
+  seoDescription   String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([status, order])
+}
+
+model Media {
+  id        String    @id @default(cuid())
+  url       String
+  kind      String    @default("image")
+  alt       String
+  ratio     String    @default("16:9")
+  poster    String?
+  width     Int?
+  height    Int?
+  createdAt DateTime  @default(now())
+  heroFor   Project[] @relation("ProjectHero")
+}
+
+model Client {
+  id        String  @id @default(cuid())
+  name      String  @unique
+  logoUrl   String?
+  order     Int     @default(0)
+  published Boolean @default(true)
+}
+
+model Capability {
+  id    String   @id @default(cuid())
+  slug  String   @unique
+  name  String
+  lead  String
+  items String[]
+  order Int      @default(0)
+}
+
+model TeamMember {
+  id       String  @id @default(cuid())
+  name     String
+  role     String
+  photoUrl String?
+  order    Int     @default(0)
+}
+
+model NewsPost {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  title     String
+  excerpt   String
+  body      String
+  coverUrl  String?
+  status    String   @default("DRAFT")
+  publishedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Setting {
+  key   String @id
+  value Json
+}
+
+model Enquiry {
+  id        String   @id @default(cuid())
+  name      String
+  company   String?
+  email     String
+  phone     String?
+  need      String?
+  message   String
+  createdAt DateTime @default(now())
+}
