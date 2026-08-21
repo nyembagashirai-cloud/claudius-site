@@ -43,7 +43,7 @@ database outage degrades the site to its last-known content rather than to a bla
 | `NEXT_PUBLIC_SITE_URL` | yes | Canonical URLs, sitemap, social previews |
 | `DATABASE_URL` | for the CMS | Postgres connection string. Locally use Neon's **direct** string; on Vercel use the **pooled** one (see `.env.example`) |
 | `AUTH_SECRET` | for the CMS | Signs admin sessions. `openssl rand -base64 48` |
-| `BLOB_READ_WRITE_TOKEN` | for uploads | Vercel Blob store. Without it, media can still be added by URL |
+| `BLOB_READ_WRITE_TOKEN` | optional | Vercel Blob, only if you want in-CMS file uploads. Images normally live in `public/images/` |
 | `ADMIN_EMAIL` / `ADMIN_PASSWORD` | first run only | Creates the first editor account via `npm run db:seed` |
 
 Never commit `.env.local`. Rotate `AUTH_SECRET` and the seeded admin password before launch.
@@ -63,6 +63,7 @@ Never commit `.env.local`. Rotate `AUTH_SECRET` and the seeded admin password be
 | `npm run db:migrate` | Create and apply a migration |
 | `npm run db:seed` | Seed projects, clients, capabilities, first admin |
 | `npm run db:studio` | Prisma Studio |
+| `npm run media:index` | Re-index `public/images/` for the CMS pickers |
 
 ---
 
@@ -104,6 +105,28 @@ src/
 6. Set **Status → Published**, and tick *Feature on the homepage* for the top five.
 
 The public pages revalidate automatically on save.
+
+### Imagery
+
+Photography lives in `public/images/`, committed with the code — there is no
+upload service to configure and no storage allowance to exhaust. Drop files into
+a folder named after the client, then:
+
+```bash
+npm run media:index   # also runs automatically on dev and build
+```
+
+Push, then open **Media** in the CMS and click **Register** so the files appear
+by name in the hero picker and every media block. `public/images/README.md`
+covers naming and sizing.
+
+Campaign films belong on YouTube or Vimeo rather than in the repository —
+adaptive streaming plays properly on a phone on a poor connection; a self-hosted
+MP4 does not.
+
+Vercel Blob is supported but optional: set `BLOB_READ_WRITE_TOKEN` and an upload
+control appears in the CMS. Only worth it if someone who cannot push to the
+repository needs to add images.
 
 ### Placeholders
 

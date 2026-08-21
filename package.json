@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/build-media-manifest.mjs",
     "dev": "next dev",
     "postinstall": "prisma generate",
+    "prebuild": "node scripts/build-media-manifest.mjs",
     "build": "prisma generate && next build",
     "start": "next start",
     "lint": "eslint",
@@ -13,7 +15,8 @@
     "db:push": "dotenv -e .env.local -- prisma db push",
     "db:migrate": "dotenv -e .env.local -- prisma migrate dev",
     "db:seed": "dotenv -e .env.local -- tsx prisma/seed.ts",
-    "db:studio": "dotenv -e .env.local -- prisma studio"
+    "db:studio": "dotenv -e .env.local -- prisma studio",
+    "media:index": "node scripts/build-media-manifest.mjs"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.3.0",

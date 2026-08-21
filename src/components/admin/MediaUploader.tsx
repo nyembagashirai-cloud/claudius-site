@@ -36,14 +36,7 @@ export default function MediaUploader({ enabled }: { enabled: boolean }) {
     }
   }
 
-  if (!enabled) {
-    return (
-      <p className="a-note">
-        File uploads need a Vercel Blob store. Add <code>BLOB_READ_WRITE_TOKEN</code> to your
-        environment to turn them on — until then you can add media by URL below.
-      </p>
-    );
-  }
+  if (!enabled) return null;
 
   return (
     <div className="a-field">
