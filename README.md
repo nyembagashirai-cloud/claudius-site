@@ -24,6 +24,10 @@ npm run dev
 
 Open <http://localhost:3000>. The CMS is at <http://localhost:3000/admin>.
 
+All four commands read `.env.local`. Next.js loads it natively; the `db:*`
+scripts are wrapped in `dotenv-cli` so the Prisma CLI and the seed script —
+neither of which knows about `.env.local` — see the same values.
+
 ### Running without a database
 
 Leave `DATABASE_URL` unset and the public site renders from the seed content in
@@ -37,7 +41,7 @@ database outage degrades the site to its last-known content rather than to a bla
 | Variable | Required | What it does |
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | yes | Canonical URLs, sitemap, social previews |
-| `DATABASE_URL` | for the CMS | Postgres connection string |
+| `DATABASE_URL` | for the CMS | Postgres connection string. Locally use Neon's **direct** string; on Vercel use the **pooled** one (see `.env.example`) |
 | `AUTH_SECRET` | for the CMS | Signs admin sessions. `openssl rand -base64 48` |
 | `BLOB_READ_WRITE_TOKEN` | for uploads | Vercel Blob store. Without it, media can still be added by URL |
 | `ADMIN_EMAIL` / `ADMIN_PASSWORD` | first run only | Creates the first editor account via `npm run db:seed` |

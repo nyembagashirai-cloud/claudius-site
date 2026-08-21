@@ -5,7 +5,7 @@ import { saveSettings } from '../actions';
 export const dynamic = 'force-dynamic';
 
 interface SiteSettings {
-  email?: string; phone?: string; city?: string; country?: string;
+  email?: string; phone?: string; whatsapp?: string; city?: string; country?: string;
   instagram?: string; linkedin?: string; facebook?: string;
   seoTitle?: string; seoDescription?: string;
 }
@@ -36,6 +36,14 @@ export default async function AdminSettings() {
           <div className="a-field">
             <label htmlFor="phone">Telephone</label>
             <input id="phone" name="phone" defaultValue={s.phone ?? site.phone} />
+          </div>
+          <div className="a-field">
+            <label htmlFor="whatsapp">WhatsApp number</label>
+            <input id="whatsapp" name="whatsapp" defaultValue={s.whatsapp ?? site.whatsapp} />
+            <span className="hint">
+              Country code first, digits only — e.g. 263772282549. Drives the floating WhatsApp
+              button and the contact page. Clear it to hide both.
+            </span>
           </div>
           <div className="a-field">
             <label htmlFor="city">City</label>

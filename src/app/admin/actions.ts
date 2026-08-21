@@ -167,6 +167,7 @@ export async function saveSettings(formData: FormData) {
   const value = {
     email: String(formData.get('email') ?? '').trim(),
     phone: String(formData.get('phone') ?? '').trim(),
+    whatsapp: String(formData.get('whatsapp') ?? '').trim(),
     city: String(formData.get('city') ?? '').trim(),
     country: String(formData.get('country') ?? '').trim(),
     instagram: String(formData.get('instagram') ?? '').trim(),

@@ -9,6 +9,34 @@ import type { Project, Discipline } from '@/lib/types';
  * in `src/content/projects.ts` so the site is never blank.
  */
 
+/**
+ * Turns the two failures people actually hit into one actionable line each,
+ * instead of the same twelve-frame stack repeated for every read on the page.
+ */
+function explain(label: string, error: unknown) {
+  const message = error instanceof Error ? error.message : String(error);
+
+  if (message.includes('did not initialize yet')) {
+    console.warn(
+      `[content] ${label}: the Prisma client has not been generated. ` +
+        'Run `npx prisma generate` (or reinstall — it runs on postinstall). ' +
+        'Serving seed content until then.',
+    );
+    return;
+  }
+
+  if (message.includes("Can't reach database server") || message.includes('ECONNREFUSED')) {
+    console.warn(
+      `[content] ${label}: cannot reach the database. Check DATABASE_URL, and ` +
+        'note that Neon computes sleep when idle and take a moment to wake. ' +
+        'Serving seed content until then.',
+    );
+    return;
+  }
+
+  console.error(`[content] ${label}: database read failed, serving seed content.`, error);
+}
+
 async function fromDatabase(): Promise<Project[] | null> {
   if (!process.env.DATABASE_URL) return null;
   try {
@@ -16,7 +44,7 @@ async function fromDatabase(): Promise<Project[] | null> {
     const rows = await getPublishedProjects();
     return rows.length ? rows : null;
   } catch (error) {
-    console.error('[content] database read failed, falling back to seed content', error);
+    explain('projects', error);
     return null;
   }
 }
@@ -82,7 +110,7 @@ export async function getClients(): Promise<string[]> {
     });
     if (rows.length) return rows.map((r) => r.name);
   } catch (error) {
-    console.error('[content] client read failed', error);
+    explain('clients', error);
   }
   return (await import('@/content/site')).clients;
 }
@@ -92,6 +120,7 @@ export async function getClients(): Promise<string[]> {
 export interface SiteSettings {
   email: string;
   phone: string;
+  whatsapp: string;
   city: string;
   country: string;
   social: { label: string; href: string }[];
@@ -102,6 +131,7 @@ export async function getSiteSettings(): Promise<SiteSettings> {
   const fallback: SiteSettings = {
     email: site.email,
     phone: site.phone,
+    whatsapp: site.whatsapp,
     city: site.city,
     country: site.country,
     social: site.social,
@@ -121,12 +151,13 @@ export async function getSiteSettings(): Promise<SiteSettings> {
     return {
       email: v.email || fallback.email,
       phone: v.phone || fallback.phone,
+      whatsapp: v.whatsapp || fallback.whatsapp,
       city: v.city || fallback.city,
       country: v.country || fallback.country,
       social: social.length ? social : fallback.social,
     };
   } catch (error) {
-    console.error('[content] settings read failed', error);
+    explain('settings', error);
     return fallback;
   }
 }

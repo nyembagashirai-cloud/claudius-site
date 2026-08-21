@@ -5,8 +5,8 @@ type Row = Awaited<ReturnType<typeof prisma.project.findMany>>[number] & {
   hero?: { url: string; kind: string; alt: string; ratio: string; poster: string | null } | null;
 };
 
-function toMedia(hero: Row['hero'], fallbackAlt: string): Media {
-  if (!hero) return { alt: fallbackAlt, ratio: '16:9', slot: fallbackAlt };
+function toMedia(hero: Row['hero'], fallbackAlt: string, slot?: string): Media {
+  if (!hero) return { alt: fallbackAlt, ratio: '16:9', slot: slot ?? fallbackAlt };
   return {
     src: hero.url,
     kind: hero.kind === 'video' ? 'video' : 'image',
@@ -27,7 +27,7 @@ function toProject(row: Row): Project {
     disciplines: row.disciplines as Discipline[],
     services: row.services,
     shortDescription: row.shortDescription,
-    hero: toMedia(row.hero, `${row.client} — ${row.title}`),
+    hero: toMedia(row.hero, `${row.client} — ${row.title}`, `${row.client} · campaign image`),
     challenge: row.challenge,
     idea: row.idea,
     whatWeDid: row.whatWeDid,

@@ -553,4 +553,44 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .contact-aside ul { list-style:none; margin:0; padding:0; }
 .btn[disabled] { opacity:.6; cursor: progress; }
 
+
+/* ============================================================
+   WHATSAPP
+   ============================================================ */
+.wa-float {
+  position: fixed; right: var(--margin); bottom: clamp(20px, 4vh, 36px); z-index: 55;
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 13px 20px; border-radius: 2px;
+  background: var(--color-teal-700); color: #fff;
+  font-family: var(--font-mono); font-size: .6875rem; letter-spacing: .14em; text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(4, 50, 61, .28);
+  opacity: 0; visibility: hidden; translate: 0 14px;
+  transition: opacity 500ms var(--ease), translate 500ms var(--ease),
+              visibility 500ms, background 300ms var(--ease), transform 500ms var(--ease);
+}
+.wa-float[data-visible="true"] { opacity: 1; visibility: visible; translate: 0 0; }
+.wa-float:hover { background: var(--color-teal-500); }
+@media (max-width: 700px) {
+  .wa-float { padding: 14px; border-radius: 50%; }
+  .wa-float span { display: none; }
+}
+
+.wa-inline {
+  display: inline-flex; align-items: center; gap: 11px;
+  padding: 18px 28px; border-radius: 2px;
+  border: 1px solid currentColor;
+  font-family: var(--font-mono); font-size: .8125rem; letter-spacing: .14em; text-transform: uppercase;
+  transition: background 300ms var(--ease), color 300ms var(--ease);
+}
+.wa-inline:hover { background: #fff; color: var(--color-teal-900); }
+
+
+.contact-fast {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 24px; margin-bottom: clamp(36px, 6vh, 64px);
+  padding: clamp(20px, 3vh, 30px) 0;
+  border-top: 1px solid rgba(255,255,255,.25);
+  border-bottom: 1px solid rgba(255,255,255,.25);
+}
+
 }

@@ -13,7 +13,10 @@ export const site = {
   city: 'Harare',
   country: 'Zimbabwe',
   email: 'hello@claudiusandco.com',
-  phone: '',
+  phone: '+263 77 228 2549',
+  /** Digits only, country code first — the format wa.me expects. */
+  whatsapp: '263772282549',
+  whatsappMessage: 'Hi Claudius & Co. — I’d like to talk about a project.',
   social: [
     { label: 'Instagram', href: '#' },
     { label: 'LinkedIn', href: '#' },
@@ -93,3 +96,10 @@ export const contactNeeds = [
   'Full integrated campaign',
   'Something else',
 ];
+
+/** Builds a wa.me deep link, pre-filling the first message. */
+export function whatsappLink(number: string, message = site.whatsappMessage) {
+  const digits = (number ?? '').replace(/\D/g, '');
+  if (!digits) return null;
+  return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
+}

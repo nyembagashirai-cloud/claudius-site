@@ -1,10 +1,13 @@
 import Link from 'next/link';
 import Reveal from '@/components/primitives/Reveal';
 import SplitLines from '@/components/primitives/SplitLines';
+import { whatsappLink } from '@/content/site';
 import { getSiteSettings } from '@/lib/content';
+import { WhatsAppGlyph } from '@/components/chrome/WhatsAppButton';
 
 export default async function ContactCta() {
   const site = await getSiteSettings();
+  const whatsapp = whatsappLink(site.whatsapp);
   return (
     <section
       className="wrap bg-teal-700 py-[clamp(110px,18vh,220px)] text-white"
@@ -24,9 +27,16 @@ export default async function ContactCta() {
       </Reveal>
 
       <Reveal delay={200}>
-        <Link href="/contact" className="btn btn-lg">
-          Start a conversation <span className="arrow">→</span>
-        </Link>
+        <div className="flex flex-wrap items-center gap-4">
+          <Link href="/contact" className="btn btn-lg">
+            Start a conversation <span className="arrow">→</span>
+          </Link>
+          {whatsapp ? (
+            <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="wa-inline">
+              <WhatsAppGlyph size={18} /> Message us
+            </a>
+          ) : null}
+        </div>
       </Reveal>
 
       <div className="mt-[clamp(56px,9vh,110px)] grid gap-7 border-t border-white/25 pt-6 [grid-template-columns:repeat(auto-fit,minmax(180px,1fr))]">

@@ -52,8 +52,13 @@ export default function BlockEditor({
 
   const add = (type: string) => setBlocks((list) => [...list, TEMPLATES[type]()]);
 
-  const mediaField = (label: string, media: Media, onChange: (m: Media) => void) => (
-    <fieldset style={{ border: '1px solid #E6E9EA', borderRadius: 3, padding: 12, marginBottom: 10 }}>
+  const mediaField = (
+    label: string,
+    media: Media,
+    onChange: (m: Media) => void,
+    key?: React.Key,
+  ) => (
+    <fieldset key={key} style={{ border: '1px solid #E6E9EA', borderRadius: 3, padding: 12, marginBottom: 10 }}>
       <legend style={{ fontSize: '.72rem', color: '#5A6166', padding: '0 6px' }}>{label}</legend>
       <div className="a-grid3">
         <div className="a-field">
@@ -165,11 +170,16 @@ export default function BlockEditor({
           {block.type === 'media-trio' ? (
             <>
               {block.items.map((item, j) =>
-                mediaField(`Item ${j + 1}`, item, (m) => {
-                  const items = [...block.items] as [Media, Media, Media];
-                  items[j] = m;
-                  update(i, { ...block, items });
-                }),
+                mediaField(
+                  `Item ${j + 1}`,
+                  item,
+                  (m) => {
+                    const items = [...block.items] as [Media, Media, Media];
+                    items[j] = m;
+                    update(i, { ...block, items });
+                  },
+                  j,
+                ),
               )}
             </>
           ) : null}

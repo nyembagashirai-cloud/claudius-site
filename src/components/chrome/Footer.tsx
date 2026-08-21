@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { nav } from '@/content/site';
+import { nav, whatsappLink } from '@/content/site';
 import { getSiteSettings } from '@/lib/content';
 import { featuredSlugs, projects } from '@/content/projects';
 
 export default async function Footer() {
   const settings = await getSiteSettings();
+  const whatsapp = whatsappLink(settings.whatsapp);
   const featured = featuredSlugs
     .map((slug) => projects.find((p) => p.slug === slug))
     .filter(Boolean)
@@ -45,6 +46,16 @@ export default async function Footer() {
             ))}
           </div>
           <div>
+            {whatsapp ? (
+              <a
+                href={whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="t-label block py-1 transition-colors hover:text-white"
+              >
+                WhatsApp
+              </a>
+            ) : null}
             {settings.social.map((s) => (
               <a
                 key={s.label}

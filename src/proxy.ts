@@ -2,10 +2,14 @@ import { NextResponse, type NextRequest } from 'next/server';
 import { verifyToken, SESSION_COOKIE } from '@/lib/auth';
 
 /**
- * Gate every /admin route except the login screen. The JWT is verified at
- * the edge so an expired or forged cookie never reaches a page component.
+ * Gate every /admin route except the login screen. The JWT is verified here,
+ * before any route renders, so an expired or forged cookie never reaches a
+ * page component.
+ *
+ * Next 16 renamed the `middleware` file convention to `proxy`; this is the
+ * same code under the new name.
  */
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   if (pathname === '/admin/login') return NextResponse.next();
 
