@@ -1,5 +1,29 @@
 import type { Capability } from '@/lib/types';
 
+/**
+ * Canonical origin, in order of trust:
+ *
+ *   1. NEXT_PUBLIC_SITE_URL — set it explicitly and it always wins.
+ *   2. VERCEL_PROJECT_PRODUCTION_URL — injected by Vercel, and it prefers a
+ *      custom domain over the .vercel.app one, so production is correct even
+ *      if nobody remembers to update the variable after connecting a domain.
+ *   3. localhost, for development.
+ *
+ * This drives canonical URLs, the sitemap and social preview cards, so a wrong
+ * value here is what gets a .vercel.app address indexed instead of the real
+ * domain. There is deliberately no hardcoded production fallback: guessing a
+ * domain is worse than an obviously-local one.
+ */
+function resolveSiteUrl() {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (explicit) return explicit.replace(/\/$/, '');
+
+  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
+  if (vercel) return `https://${vercel.replace(/^https?:\/\//, '').replace(/\/$/, '')}`;
+
+  return 'http://localhost:3000';
+}
+
 export const site = {
   name: 'Claudius & Co.',
   legalName: 'Claudius & Co.',
@@ -8,11 +32,11 @@ export const site = {
   description:
     'Claudius & Co. is a Zimbabwean creative and marketing agency combining strategy, ' +
     'creativity, technology and on-ground execution to build brands that matter.',
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://claudiusandco.com',
+  url: resolveSiteUrl(),
   locale: 'en_ZW',
   city: 'Harare',
   country: 'Zimbabwe',
-  email: 'hello@claudiusandco.com',
+  email: 'hello@claudiusco.co.zw',
   phone: '+263 77 228 2549',
   /** Digits only, country code first — the format wa.me expects. */
   whatsapp: '263772282549',
