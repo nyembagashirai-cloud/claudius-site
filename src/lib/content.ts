@@ -102,12 +102,14 @@ export async function getDisciplinesInUse(): Promise<Discipline[]> {
 export async function getClients(): Promise<string[]> {
   if (!process.env.DATABASE_URL) return (await import('@/content/site')).clients;
   try {
-    const { prisma } = await import('@/lib/db/client');
-    const rows = await prisma.client.findMany({
-      where: { published: true },
-      orderBy: { order: 'asc' },
-      select: { name: true },
-    });
+    const { prisma, resilient } = await import('@/lib/db/client');
+    const rows = await resilient(() =>
+      prisma.client.findMany({
+        where: { published: true },
+        orderBy: { order: 'asc' },
+        select: { name: true },
+      }),
+    );
     if (rows.length) return rows.map((r) => r.name);
   } catch (error) {
     explain('clients', error);
@@ -139,8 +141,8 @@ export async function getSiteSettings(): Promise<SiteSettings> {
 
   if (!process.env.DATABASE_URL) return fallback;
   try {
-    const { prisma } = await import('@/lib/db/client');
-    const row = await prisma.setting.findUnique({ where: { key: 'site' } });
+    const { prisma, resilient } = await import('@/lib/db/client');
+    const row = await resilient(() => prisma.setting.findUnique({ where: { key: 'site' } }));
     if (!row) return fallback;
     const v = row.value as Record<string, string>;
     const social = [

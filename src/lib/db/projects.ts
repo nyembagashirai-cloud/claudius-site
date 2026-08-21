@@ -1,4 +1,4 @@
-import { prisma } from './client';
+import { prisma, resilient } from './client';
 import type { ContentBlock, Discipline, Media, Project } from '@/lib/types';
 
 type Row = Awaited<ReturnType<typeof prisma.project.findMany>>[number] & {
@@ -40,11 +40,13 @@ function toProject(row: Row): Project {
 }
 
 export async function getPublishedProjects(): Promise<Project[]> {
-  const rows = await prisma.project.findMany({
-    where: { status: 'PUBLISHED' },
-    orderBy: { order: 'asc' },
-    include: { hero: true },
-  });
+  const rows = await resilient(() =>
+    prisma.project.findMany({
+      where: { status: 'PUBLISHED' },
+      orderBy: { order: 'asc' },
+      include: { hero: true },
+    }),
+  );
   return rows.map((row) => toProject(row as Row));
 }
 
