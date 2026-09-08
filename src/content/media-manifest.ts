@@ -53,6 +53,13 @@ export const mediaManifest: ManifestEntry[] = [
     "bytes": 250374
   },
   {
+    "url": "/images/icz-591/591-lockup.png",
+    "name": "591-lockup.png",
+    "folder": "icz-591",
+    "kind": "image",
+    "bytes": 326159
+  },
+  {
     "url": "/images/icz-591/ambulance-handover.jpg",
     "name": "ambulance-handover.jpg",
     "folder": "icz-591",

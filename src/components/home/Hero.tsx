@@ -39,9 +39,10 @@ const TILES: { media: MediaType; className: string; depth: number }[] = [
   },
   {
     media: {
-      src: '/images/icz-591/campaign-591.jpg',
-      alt: 'The 591 toll-free emergency campaign key visual',
-      ratio: '1:1',
+      src: '/images/icz-591/591-lockup.png',
+      fit: 'contain',
+      alt: 'The ICZ 591 toll-free emergency line campaign lockup',
+      ratio: '3:2',
       slot: '591 · campaign',
     },
     className: 'ht ht-4',
