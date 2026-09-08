@@ -50,7 +50,7 @@ export const mediaManifest: ManifestEntry[] = [
     "name": "inflatable-pack.jpg",
     "folder": "huletts",
     "kind": "image",
-    "bytes": 172732
+    "bytes": 250374
   },
   {
     "url": "/images/icz-591/ambulance-handover.jpg",

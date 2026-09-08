@@ -274,8 +274,8 @@ export const projects: Project[] = [
     blocks: [
       {
         type: 'media-split',
-        left: { src: '/images/icz-591/campaign-591.jpg', alt: 'The 591 toll-free campaign key visual', ratio: '4:5', slot: '591 · campaign' },
-        right: { src: '/images/icz-591/festive-ambulances.jpg', alt: 'Festive season highway emergency support creative', ratio: '4:5', slot: '591 · festive' },
+        left: { src: '/images/icz-591/campaign-591.jpg', alt: 'The 591 toll-free campaign key visual', ratio: '1:1', slot: '591 · campaign' },
+        right: { src: '/images/icz-591/festive-ambulances.jpg', alt: 'Festive season highway emergency support creative', ratio: '1:1', slot: '591 · festive' },
       },
       { type: 'statement', lines: ['COVER MAKES SENSE', 'WHEN IT’S EXPLAINED', 'IN PUBLIC.'], ground: 'teal' },
       {
@@ -300,9 +300,9 @@ export const projects: Project[] = [
     hero: {
       src: '/images/huletts/inflatable-pack.jpg',
       fit: 'contain',
-      alt: 'A giant inflatable Huletts SunSweet brown sugar pack standing in a branded show environment, cut cane laid at its base',
+      alt: 'A giant inflatable Huletts SunSweet pack standing among Huletts banners and cut cane at an exhibition stand',
       ratio: '4:5',
-      slot: 'Huletts · installation',
+      slot: 'Huletts · brand environment',
     },
     challenge: ['A well-known brand present at every event — and remembered from none of them.'],
     idea: ['Stop building stands. Start building environments people want to stand inside.'],

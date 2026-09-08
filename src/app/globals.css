@@ -300,7 +300,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .ht-1 { top: 13%; right: 2%;  width: min(21.5vw, 300px); }
 .ht-2 { top: 6%;  right: 30%; width: min(15vw, 208px); }
 .ht-3 { bottom: 11%; right: 5%; width: min(21vw, 285px); }
-.ht-4 { top: 12%; left: 1.5%; width: min(11.5vw, 160px); }
+.ht-4 { top: 11%; left: 1.5%; width: min(15vw, 215px); }
 @media (max-width: 900px) {
   .ht-4 { display: none; }
   .ht-1 { top: 7%;  right: 3%;  bottom: auto; width: 46vw; }
