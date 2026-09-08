@@ -11,67 +11,46 @@ export interface ManifestEntry {
 
 export const mediaManifest: ManifestEntry[] = [
   {
-    "url": "/images/clouds (1).jpg",
-    "name": "clouds (1).jpg",
-    "folder": "",
-    "kind": "image",
-    "bytes": 1677077
-  },
-  {
-    "url": "/images/clouds (2).jpg",
-    "name": "clouds (2).jpg",
-    "folder": "",
-    "kind": "image",
-    "bytes": 1765254
-  },
-  {
-    "url": "/images/clouds (3).jpg",
-    "name": "clouds (3).jpg",
-    "folder": "",
-    "kind": "image",
-    "bytes": 1883569
-  },
-  {
     "url": "/images/events/fun-run-aerobics.jpg",
     "name": "fun-run-aerobics.jpg",
     "folder": "events",
     "kind": "image",
-    "bytes": 749418
+    "bytes": 518874
   },
   {
     "url": "/images/events/fun-run-finish.jpg",
     "name": "fun-run-finish.jpg",
     "folder": "events",
     "kind": "image",
-    "bytes": 773108
+    "bytes": 541200
   },
   {
     "url": "/images/events/fun-run-group.jpg",
     "name": "fun-run-group.jpg",
     "folder": "events",
     "kind": "image",
-    "bytes": 935660
+    "bytes": 654680
   },
   {
     "url": "/images/events/reinsurance-forum-delegates.jpg",
     "name": "reinsurance-forum-delegates.jpg",
     "folder": "events",
     "kind": "image",
-    "bytes": 847396
+    "bytes": 570173
   },
   {
     "url": "/images/events/reinsurance-forum-handshake.jpg",
     "name": "reinsurance-forum-handshake.jpg",
     "folder": "events",
     "kind": "image",
-    "bytes": 664829
+    "bytes": 454821
   },
   {
     "url": "/images/huletts/inflatable-pack.jpg",
     "name": "inflatable-pack.jpg",
     "folder": "huletts",
     "kind": "image",
-    "bytes": 290046
+    "bytes": 250374
   },
   {
     "url": "/images/icz-591/591-lockup.png",
@@ -85,7 +64,7 @@ export const mediaManifest: ManifestEntry[] = [
     "name": "ambulance-handover.jpg",
     "folder": "icz-591",
     "kind": "image",
-    "bytes": 664891
+    "bytes": 479715
   },
   {
     "url": "/images/icz-591/campaign-591.jpg",
@@ -106,7 +85,7 @@ export const mediaManifest: ManifestEntry[] = [
     "name": "launch-officials.jpg",
     "folder": "icz-591",
     "kind": "image",
-    "bytes": 554771
+    "bytes": 375727
   },
   {
     "url": "/images/icz-591/quarterly-digest.png",
@@ -120,7 +99,7 @@ export const mediaManifest: ManifestEntry[] = [
     "name": "spokespeople.jpg",
     "folder": "icz-591",
     "kind": "image",
-    "bytes": 492039
+    "bytes": 321188
   },
   {
     "url": "/images/logos/Clere for men logo-21.png",
@@ -218,56 +197,56 @@ export const mediaManifest: ManifestEntry[] = [
     "name": "eilts-amour.jpg",
     "folder": "medtech",
     "kind": "image",
-    "bytes": 320777
+    "bytes": 198806
   },
   {
     "url": "/images/medtech/eilts-enchante-macro.jpg",
     "name": "eilts-enchante-macro.jpg",
     "folder": "medtech",
     "kind": "image",
-    "bytes": 296083
+    "bytes": 190938
   },
   {
     "url": "/images/medtech/eilts-enchante.jpg",
     "name": "eilts-enchante.jpg",
     "folder": "medtech",
     "kind": "image",
-    "bytes": 434038
+    "bytes": 272128
   },
   {
     "url": "/images/medtech/eilts-grandiose.jpg",
     "name": "eilts-grandiose.jpg",
     "folder": "medtech",
     "kind": "image",
-    "bytes": 356010
+    "bytes": 215469
   },
   {
     "url": "/images/medtech/eilts-still-life.jpg",
     "name": "eilts-still-life.jpg",
     "folder": "medtech",
     "kind": "image",
-    "bytes": 282078
+    "bytes": 189780
   },
   {
     "url": "/images/medtech/retail-activation.jpg",
     "name": "retail-activation.jpg",
     "folder": "medtech",
     "kind": "image",
-    "bytes": 940130
+    "bytes": 637472
   },
   {
     "url": "/images/medtech/roadshow-promoters.jpg",
     "name": "roadshow-promoters.jpg",
     "folder": "medtech",
     "kind": "image",
-    "bytes": 936590
+    "bytes": 677251
   },
   {
     "url": "/images/medtech/roadshow-stage.jpg",
     "name": "roadshow-stage.jpg",
     "folder": "medtech",
     "kind": "image",
-    "bytes": 1042875
+    "bytes": 742132
   },
   {
     "url": "/images/medtech/satiskin-berry-fantasy.png",
@@ -309,7 +288,7 @@ export const mediaManifest: ManifestEntry[] = [
     "name": "activation-promoters.jpg",
     "folder": "opal",
     "kind": "image",
-    "bytes": 980627
+    "bytes": 685522
   },
   {
     "url": "/images/opal/logo.png",
@@ -386,7 +365,7 @@ export const mediaManifest: ManifestEntry[] = [
     "name": "sampling-gazebo.jpg",
     "folder": "silkea",
     "kind": "image",
-    "bytes": 804056
+    "bytes": 572835
   },
   {
     "url": "/images/skylake (1).jpeg",
