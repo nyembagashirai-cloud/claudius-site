@@ -8,10 +8,10 @@ import type { Media as MediaType } from '@/lib/types';
 const TILES: { media: MediaType; className: string; depth: number }[] = [
   {
     media: {
-      src: '/images/medtech/roadshow-stage.jpg',
-      alt: 'Dancers performing on a branded roadshow stage',
+      src: '/images/medtech/roadshow-promoters.jpg',
+      alt: 'Promoters presenting the consumer brand range at a roadshow',
       ratio: '4:5',
-      slot: 'Roadshow · stage',
+      slot: 'Roadshow · promoters',
     },
     className: 'ht ht-1',
     depth: 26,

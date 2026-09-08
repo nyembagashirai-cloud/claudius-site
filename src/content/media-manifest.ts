@@ -102,95 +102,95 @@ export const mediaManifest: ManifestEntry[] = [
     "bytes": 321188
   },
   {
-    "url": "/images/logos/Clere for men logo-21.png",
-    "name": "Clere for men logo-21.png",
+    "url": "/images/logos/clere-for-men.png",
+    "name": "clere-for-men.png",
     "folder": "logos",
     "kind": "image",
-    "bytes": 278307
+    "bytes": 53532
   },
   {
-    "url": "/images/logos/F&C PROPERTY PASSPORT LOGO-01.png",
-    "name": "F&C PROPERTY PASSPORT LOGO-01.png",
+    "url": "/images/logos/clere.png",
+    "name": "clere.png",
     "folder": "logos",
     "kind": "image",
-    "bytes": 437594
+    "bytes": 62253
   },
   {
-    "url": "/images/logos/ICZ logo curves-01.png",
-    "name": "ICZ logo curves-01.png",
+    "url": "/images/logos/easy-waves.png",
+    "name": "easy-waves.png",
     "folder": "logos",
     "kind": "image",
-    "bytes": 10043
+    "bytes": 76647
   },
   {
-    "url": "/images/logos/logos-01.png",
-    "name": "logos-01.png",
+    "url": "/images/logos/eilts.png",
+    "name": "eilts.png",
     "folder": "logos",
     "kind": "image",
-    "bytes": 221018
+    "bytes": 87049
   },
   {
-    "url": "/images/logos/logos-02.png",
-    "name": "logos-02.png",
+    "url": "/images/logos/fine-and-country.png",
+    "name": "fine-and-country.png",
     "folder": "logos",
     "kind": "image",
-    "bytes": 306042
+    "bytes": 65542
   },
   {
-    "url": "/images/logos/logos-03.png",
-    "name": "logos-03.png",
+    "url": "/images/logos/huletts.png",
+    "name": "huletts.png",
     "folder": "logos",
     "kind": "image",
-    "bytes": 214858
+    "bytes": 57556
   },
   {
-    "url": "/images/logos/logos-04.png",
-    "name": "logos-04.png",
+    "url": "/images/logos/icz.png",
+    "name": "icz.png",
     "folder": "logos",
     "kind": "image",
-    "bytes": 956448
+    "bytes": 62900
   },
   {
-    "url": "/images/logos/logos-05.png",
-    "name": "logos-05.png",
+    "url": "/images/logos/opal.png",
+    "name": "opal.png",
     "folder": "logos",
     "kind": "image",
-    "bytes": 214605
+    "bytes": 106012
   },
   {
-    "url": "/images/logos/logos-07.png",
-    "name": "logos-07.png",
+    "url": "/images/logos/sanctuary.png",
+    "name": "sanctuary.png",
     "folder": "logos",
     "kind": "image",
-    "bytes": 380535
+    "bytes": 59041
   },
   {
-    "url": "/images/logos/logos-08.png",
-    "name": "logos-08.png",
+    "url": "/images/logos/satiskin.png",
+    "name": "satiskin.png",
     "folder": "logos",
     "kind": "image",
-    "bytes": 267115
+    "bytes": 79864
   },
   {
-    "url": "/images/logos/MD MAINLINE LOGOS-07.png",
-    "name": "MD MAINLINE LOGOS-07.png",
+    "url": "/images/logos/shower-to-shower.png",
+    "name": "shower-to-shower.png",
     "folder": "logos",
     "kind": "image",
-    "bytes": 88195
+    "bytes": 64244
   },
   {
-    "url": "/images/logos/Red Huletts logo.png",
-    "name": "Red Huletts logo.png",
+    "url": "/images/logos/silkea.png",
+    "name": "silkea.png",
     "folder": "logos",
     "kind": "image",
-    "bytes": 1592198
+    "bytes": 43504
   },
   {
-    "url": "/images/logos/SIC LOGO-01.png",
-    "name": "SIC LOGO-01.png",
+    "url": "/images/logos/top.png",
+    "name": "top.png",
     "folder": "logos",
     "kind": "image",
-    "bytes": 106513
+    "bytes": 57386
   },
   {
     "url": "/images/medtech/eilts-amour.jpg",
@@ -242,13 +242,6 @@ export const mediaManifest: ManifestEntry[] = [
     "bytes": 677251
   },
   {
-    "url": "/images/medtech/roadshow-stage.jpg",
-    "name": "roadshow-stage.jpg",
-    "folder": "medtech",
-    "kind": "image",
-    "bytes": 742132
-  },
-  {
     "url": "/images/medtech/satiskin-berry-fantasy.png",
     "name": "satiskin-berry-fantasy.png",
     "folder": "medtech",
@@ -284,11 +277,53 @@ export const mediaManifest: ManifestEntry[] = [
     "bytes": 524413
   },
   {
+    "url": "/images/opal/activation-dance-wide.jpg",
+    "name": "activation-dance-wide.jpg",
+    "folder": "opal",
+    "kind": "image",
+    "bytes": 852052
+  },
+  {
+    "url": "/images/opal/activation-dance.jpg",
+    "name": "activation-dance.jpg",
+    "folder": "opal",
+    "kind": "image",
+    "bytes": 939915
+  },
+  {
     "url": "/images/opal/activation-promoters.jpg",
     "name": "activation-promoters.jpg",
     "folder": "opal",
     "kind": "image",
     "bytes": 685522
+  },
+  {
+    "url": "/images/opal/activation-table.jpg",
+    "name": "activation-table.jpg",
+    "folder": "opal",
+    "kind": "image",
+    "bytes": 225060
+  },
+  {
+    "url": "/images/opal/character-kv.jpg",
+    "name": "character-kv.jpg",
+    "folder": "opal",
+    "kind": "image",
+    "bytes": 176374
+  },
+  {
+    "url": "/images/opal/gazebo-shopper.jpg",
+    "name": "gazebo-shopper.jpg",
+    "folder": "opal",
+    "kind": "image",
+    "bytes": 208486
+  },
+  {
+    "url": "/images/opal/in-store-shoppers.jpg",
+    "name": "in-store-shoppers.jpg",
+    "folder": "opal",
+    "kind": "image",
+    "bytes": 159130
   },
   {
     "url": "/images/opal/logo.png",
@@ -310,6 +345,27 @@ export const mediaManifest: ManifestEntry[] = [
     "folder": "opal",
     "kind": "image",
     "bytes": 1212619
+  },
+  {
+    "url": "/images/opal/shelf-block.jpg",
+    "name": "shelf-block.jpg",
+    "folder": "opal",
+    "kind": "image",
+    "bytes": 278221
+  },
+  {
+    "url": "/images/opal/shelf-facings.jpg",
+    "name": "shelf-facings.jpg",
+    "folder": "opal",
+    "kind": "image",
+    "bytes": 296042
+  },
+  {
+    "url": "/images/opal/trolley-shopper.jpg",
+    "name": "trolley-shopper.jpg",
+    "folder": "opal",
+    "kind": "image",
+    "bytes": 218463
   },
   {
     "url": "/images/silkea/bottle-apricot-bloom.png",
@@ -365,48 +421,41 @@ export const mediaManifest: ManifestEntry[] = [
     "name": "sampling-gazebo.jpg",
     "folder": "silkea",
     "kind": "image",
-    "bytes": 572835
+    "bytes": 710631
   },
   {
-    "url": "/images/skylake (1).jpeg",
-    "name": "skylake (1).jpeg",
-    "folder": "",
+    "url": "/images/skylake/campaign-kv.jpg",
+    "name": "campaign-kv.jpg",
+    "folder": "skylake",
     "kind": "image",
-    "bytes": 192450
+    "bytes": 408718
   },
   {
-    "url": "/images/skylake (1).jpg",
-    "name": "skylake (1).jpg",
-    "folder": "",
+    "url": "/images/skylake/crew.jpg",
+    "name": "crew.jpg",
+    "folder": "skylake",
     "kind": "image",
-    "bytes": 5555635
+    "bytes": 329042
   },
   {
-    "url": "/images/skylake (2).jpeg",
-    "name": "skylake (2).jpeg",
-    "folder": "",
+    "url": "/images/skylake/depot-fleet.jpg",
+    "name": "depot-fleet.jpg",
+    "folder": "skylake",
     "kind": "image",
-    "bytes": 834514
+    "bytes": 636353
   },
   {
-    "url": "/images/skylake (2).jpg",
-    "name": "skylake (2).jpg",
-    "folder": "",
+    "url": "/images/skylake/first-water.jpg",
+    "name": "first-water.jpg",
+    "folder": "skylake",
     "kind": "image",
-    "bytes": 5912352
+    "bytes": 186717
   },
   {
-    "url": "/images/skylake (3).jpeg",
-    "name": "skylake (3).jpeg",
-    "folder": "",
+    "url": "/images/skylake/rig-yard.jpg",
+    "name": "rig-yard.jpg",
+    "folder": "skylake",
     "kind": "image",
-    "bytes": 285635
-  },
-  {
-    "url": "/images/skylake (4).jpeg",
-    "name": "skylake (4).jpeg",
-    "folder": "",
-    "kind": "image",
-    "bytes": 376208
+    "bytes": 244382
   }
 ];

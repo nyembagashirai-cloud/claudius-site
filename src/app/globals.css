@@ -191,6 +191,30 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .ground-ink .marquee-word { -webkit-text-stroke-color: rgba(255,255,255,.5); }
 .ground-ink .marquee-word:hover { color: var(--color-teal-300); }
 
+/* Client marks. Every file carries the same 880×320 canvas, so one box size
+   here preserves the optical balance baked into the artwork. */
+.client-mark {
+  flex: 0 0 auto;
+  display: block;
+  width: clamp(158px, 20vw, 252px);
+  padding-inline: clamp(8px, 1.4vw, 22px);
+}
+.client-mark img {
+  width: 100%; height: auto;
+  filter: grayscale(1);
+  opacity: .55;
+  transition: filter 420ms var(--ease), opacity 420ms var(--ease), transform 420ms var(--ease);
+}
+.client-mark:hover img,
+.client-mark:focus-visible img {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.05);
+}
+@media (hover: none) {
+  .client-mark img { filter: none; opacity: .9; }
+}
+
 /* ============================================================
    HEADER
    ============================================================ */

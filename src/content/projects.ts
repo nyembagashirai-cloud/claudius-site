@@ -22,10 +22,10 @@ export const projects: Project[] = [
     shortDescription:
       'Building a washing powder brand from concept and packaging into a consumer-facing FMCG brand.',
     hero: {
-      src: '/images/opal/activation-promoters.jpg',
-      alt: 'Claudius & Co. promoters presenting Opal washing powder at a consumer activation',
+      src: '/images/opal/activation-dance.jpg',
+      alt: 'Promoters dancing in front of the branded Opal roadshow truck at a consumer activation',
       ratio: '21:9',
-      slot: 'Opal · activation',
+      slot: 'Opal · roadshow',
     },
     challenge: [
       'The opportunity was bigger than launching another washing powder.',
@@ -82,10 +82,10 @@ export const projects: Project[] = [
           slot: 'Opal · brand character',
         },
         right: {
-          src: '/images/medtech/retail-activation.jpg',
-          alt: 'Branded activation gazebos outside a retail store',
+          src: '/images/opal/character-kv.jpg',
+          alt: 'The Opal brand character on a campaign key visual with the pack range',
           ratio: '4:5',
-          slot: 'Retail · in front of store',
+          slot: 'Opal · character campaign',
         },
       },
       {
@@ -124,22 +124,22 @@ export const projects: Project[] = [
         type: 'media-trio',
         items: [
           {
-            src: '/images/medtech/roadshow-stage.jpg',
-            alt: 'Dancers performing on the branded roadshow stage',
+            src: '/images/opal/activation-promoters.jpg',
+            alt: 'Opal promoters lined up behind the ONE BIG PROMO prize display',
             ratio: '1:1',
-            slot: 'Roadshow · stage',
+            slot: 'Opal · promoters',
           },
           {
-            src: '/images/medtech/roadshow-promoters.jpg',
-            alt: 'Promoters presenting product to the crowd at a roadshow',
+            src: '/images/opal/activation-table.jpg',
+            alt: 'Promoters behind an Opal activation table stocked with the pack range',
             ratio: '1:1',
-            slot: 'Roadshow · promoters',
+            slot: 'Opal · activation table',
           },
           {
-            src: '/images/silkea/sampling-gazebo.jpg',
-            alt: 'A sampling gazebo stocked with product, staffed by promoters',
+            src: '/images/opal/gazebo-shopper.jpg',
+            alt: 'A promoter handing an Opal pack to a shopper at a branded gazebo',
             ratio: '1:1',
-            slot: 'Sampling · gazebo',
+            slot: 'Opal · sampling',
           },
         ],
       },
@@ -167,10 +167,10 @@ export const projects: Project[] = [
       {
         type: 'media-full',
         media: {
-          src: '/images/medtech/roadshow-stage.jpg',
-          alt: 'The roadshow stage mid-performance, crowd gathered',
+          src: '/images/opal/activation-dance-wide.jpg',
+          alt: 'Promoters dancing with the product range at the Opal roadshow',
           ratio: '21:9',
-          slot: 'Roadshow · stage',
+          slot: 'Opal · roadshow',
         },
       },
       {
@@ -185,16 +185,31 @@ export const projects: Project[] = [
       {
         type: 'media-split',
         left: {
-          src: '/images/medtech/retail-activation.jpg',
-          alt: 'Branded gazebos and merchandising at a retail activation',
-          ratio: '3:2',
-          slot: 'Retail · merchandising',
+          src: '/images/opal/shelf-block.jpg',
+          alt: 'A block of Opal facings holding the shelf against competing brands',
+          ratio: '4:5',
+          slot: 'Opal · shelf block',
         },
         right: {
-          src: '/images/silkea/promo-key-visual.jpg',
-          alt: 'The One Big Promo campaign key visual',
-          ratio: '3:2',
-          slot: 'Campaign · key visual',
+          src: '/images/opal/shelf-facings.jpg',
+          alt: 'Opal packs merchandised across a supermarket laundry aisle',
+          ratio: '4:5',
+          slot: 'Opal · facings',
+        },
+      },
+      {
+        type: 'media-split',
+        left: {
+          src: '/images/opal/trolley-shopper.jpg',
+          alt: 'A shopper with a trolley loaded with Opal packs at a branded stand',
+          ratio: '4:5',
+          slot: 'Opal · in the trolley',
+        },
+        right: {
+          src: '/images/opal/in-store-shoppers.jpg',
+          alt: 'Two shoppers holding Opal packs and a promotion slip in store',
+          ratio: '4:5',
+          slot: 'Opal · bought',
         },
       },
       { type: 'statement', lines: ['THEN WE PUT IT', 'IN FRONT OF', 'THE CONSUMER.'], ground: 'ink' },
@@ -367,11 +382,44 @@ export const projects: Project[] = [
     disciplines: ['WEB', 'DIGITAL', 'CONTENT', 'STRATEGY'],
     services: ['Website Development', 'Social Media Strategy & Management', 'Content Creation', 'Marketing & PR Strategy', 'Google Ads', 'Analytics'],
     shortDescription: 'Website, content and paid search for a service business that lives on enquiries.',
-    hero: { alt: 'Skylake Borehole Drilling', ratio: '16:9', tone: 'ink', slot: 'Skylake · site & content' },
+    hero: {
+      src: '/images/skylake/depot-fleet.jpg',
+      alt: 'The Skylake Borehole Drilling fleet lined up outside the company yard',
+      ratio: '21:9',
+      slot: 'Skylake · fleet',
+    },
     challenge: ['A capable operator competing for enquiries it could not see coming.'],
     idea: ['Build the shopfront, then buy the doorway.'],
     whatWeDid: ['Website Development', 'Photography & Videography', 'Digital Marketing Strategy', 'Google Ads Execution', 'Analytics Monitoring'],
-    blocks: [],
+    blocks: [
+      {
+        type: 'media-split',
+        left: { src: '/images/skylake/crew.jpg', alt: 'The Skylake drilling crew in full PPE on site', ratio: '4:5', slot: 'Skylake · crew' },
+        right: { src: '/images/skylake/rig-yard.jpg', alt: 'A Skylake drilling rig and support trucks at the yard', ratio: '4:5', slot: 'Skylake · rig' },
+      },
+      { type: 'statement', lines: ['THE RIG DOES', 'THE WORK.', 'THE SITE FINDS IT.'], ground: 'ink' },
+      {
+        type: 'media-full',
+        media: {
+          src: '/images/skylake/campaign-kv.jpg',
+          fit: 'contain',
+          alt: 'Skylake Expert Drilling Solutions campaign key visual',
+          ratio: '16:9',
+          slot: 'Skylake · campaign',
+        },
+        caption: 'Paid search and social ran to one promise: RC, core, borehole, blasthole, pile.',
+      },
+      {
+        type: 'media-full',
+        media: {
+          src: '/images/skylake/first-water.jpg',
+          alt: 'Children drinking from a newly drilled Skylake borehole',
+          ratio: '3:2',
+          slot: 'Skylake · first water',
+        },
+        caption: 'What the enquiry form is actually for.',
+      },
+    ],
     related: ['medtech'],
   },
 ];

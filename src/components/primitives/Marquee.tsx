@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import useMarqueeSpeed from './useMarqueeSpeed';
 
 interface MarqueeProps {
   items: string[];
@@ -15,31 +15,7 @@ interface MarqueeProps {
  * wall feels connected to the page rather than looping in its own world.
  */
 export default function Marquee({ items, direction = -1, duration = 34, onSelect }: MarqueeProps) {
-  const trackRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    let last = window.scrollY;
-    let timer: number | undefined;
-    const onScroll = () => {
-      const v = Math.abs(window.scrollY - last);
-      last = window.scrollY;
-      const boost = Math.min(1 + v / 24, 5);
-      track.style.animationDuration = `${duration / boost}s`;
-      window.clearTimeout(timer);
-      timer = window.setTimeout(() => {
-        track.style.animationDuration = `${duration}s`;
-      }, 180);
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-      window.clearTimeout(timer);
-    };
-  }, [duration]);
+  const trackRef = useMarqueeSpeed(duration);
 
   // Tripled so the loop never shows an edge.
   const loop = [...items, ...items, ...items];

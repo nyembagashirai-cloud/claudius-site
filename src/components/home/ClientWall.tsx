@@ -1,16 +1,24 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import LogoMarquee from '@/components/primitives/LogoMarquee';
 import Marquee from '@/components/primitives/Marquee';
 import Reveal from '@/components/primitives/Reveal';
+import { clientLogos } from '@/content/site';
 
 /**
- * Clients as evidence, not decoration. Two counter-running rows; selecting
- * a name filters the work index to that client.
+ * Clients as evidence, not decoration.
+ *
+ * Two counter-running rows: the marks we hold artwork for, then the rest as
+ * type. Every item leads somewhere — a mark to its case study, a name to the
+ * work index filtered to that client — so the wall is a way into the work
+ * rather than a badge collection.
  */
 export default function ClientWall({ clients }: { clients: string[] }) {
   const router = useRouter();
-  const half = Math.ceil(clients.length / 2);
+
+  const withMark = new Set(clientLogos.map((l) => l.name));
+  const words = clients.filter((c) => !withMark.has(c));
 
   const open = (client: string) => {
     router.push(`/work?client=${encodeURIComponent(client)}`);
@@ -35,9 +43,9 @@ export default function ClientWall({ clients }: { clients: string[] }) {
         </Reveal>
       </div>
 
-      <div className="-mx-[var(--margin)] space-y-[clamp(10px,1.6vh,22px)]">
-        <Marquee items={clients.slice(0, half)} direction={-1} onSelect={open} />
-        <Marquee items={clients.slice(half)} direction={1} duration={40} onSelect={open} />
+      <div className="-mx-[var(--margin)] space-y-[clamp(14px,2.4vh,30px)]">
+        <LogoMarquee logos={clientLogos} direction={-1} />
+        {words.length > 0 ? <Marquee items={words} direction={1} duration={40} onSelect={open} /> : null}
       </div>
     </section>
   );

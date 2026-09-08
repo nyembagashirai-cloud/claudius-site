@@ -106,7 +106,42 @@ export const capabilities: Capability[] = [
 export const clients = [
   'OPAL', 'MEDTECH GROUP', 'HULETTS', 'SILKÉA', 'INSURANCE COUNCIL OF ZIMBABWE',
   'SANCTUARY INSURANCE', 'AIRDC', 'SKYLAKE BOREHOLE DRILLING', 'INGWEBU',
-  'SHOWER TO SHOWER', 'CLERE', 'SATISKIN', 'CHUIPACK',
+  'SHOWER TO SHOWER', 'CLERE', 'CLERE FOR MEN', 'SATISKIN', 'EASY WAVES',
+  'TOP', 'E.IL.T\u2019S PERFUMES', 'FINE & COUNTRY PROPERTY PASSPORT', 'CHUIPACK',
+];
+
+/**
+ * Client marks, for the wall.
+ *
+ * Every file is composited onto the same 880×320 canvas with its ink scaled
+ * to a constant area — not a constant height, which would make a wide
+ * wordmark and a stacked lockup read at completely different weights. That
+ * lets the page render them all at one box size and keep the balance.
+ *
+ * `project` points a mark at its case study; without one, the mark filters
+ * the work index by client name instead.
+ */
+export interface ClientLogo {
+  /** Must match a name in `clients`. */
+  name: string;
+  src: string;
+  project?: string;
+}
+
+export const clientLogos: ClientLogo[] = [
+  { name: 'OPAL', src: '/images/logos/opal.png', project: 'opal' },
+  { name: 'SILKÉA', src: '/images/logos/silkea.png', project: 'silkea' },
+  { name: 'HULETTS', src: '/images/logos/huletts.png', project: 'huletts' },
+  { name: 'INSURANCE COUNCIL OF ZIMBABWE', src: '/images/logos/icz.png', project: 'icz-591' },
+  { name: 'SATISKIN', src: '/images/logos/satiskin.png', project: 'medtech' },
+  { name: 'CLERE', src: '/images/logos/clere.png', project: 'medtech' },
+  { name: 'CLERE FOR MEN', src: '/images/logos/clere-for-men.png', project: 'medtech' },
+  { name: 'SHOWER TO SHOWER', src: '/images/logos/shower-to-shower.png', project: 'medtech' },
+  { name: 'EASY WAVES', src: '/images/logos/easy-waves.png', project: 'medtech' },
+  { name: 'TOP', src: '/images/logos/top.png', project: 'medtech' },
+  { name: 'E.IL.T\u2019S PERFUMES', src: '/images/logos/eilts.png', project: 'medtech' },
+  { name: 'SANCTUARY INSURANCE', src: '/images/logos/sanctuary.png' },
+  { name: 'FINE & COUNTRY PROPERTY PASSPORT', src: '/images/logos/fine-and-country.png' },
 ];
 
 export const contactNeeds = [
