@@ -36,6 +36,7 @@ export default function Media({
 }: MediaProps) {
   const style = fill ? undefined : { aspectRatio: RATIO[media.ratio] };
   const tone = media.tone && media.tone !== 'default' ? media.tone : undefined;
+  const fit = media.fit === 'contain' ? 'object-contain' : 'object-cover';
 
   if (!media.src) {
     return (
@@ -62,9 +63,9 @@ export default function Media({
 
   if (media.kind === 'video') {
     return (
-      <div className={`relative overflow-hidden ${fill ? 'absolute inset-0' : ''} ${className}`} style={style}>
+      <div className={`overflow-hidden ${fill ? 'media-fill' : 'relative'} ${className}`} style={style}>
         <video
-          className="h-full w-full object-cover"
+          className={`h-full w-full ${fit}`}
           src={media.src}
           poster={media.poster}
           muted
@@ -79,14 +80,14 @@ export default function Media({
   }
 
   return (
-    <div className={`relative overflow-hidden ${fill ? 'absolute inset-0' : ''} ${className}`} style={style}>
+    <div className={`overflow-hidden ${fill ? 'media-fill' : 'relative'} ${className}`} style={style}>
       <Image
         src={media.src}
         alt={media.alt}
         fill
         sizes={sizes}
         priority={priority}
-        className="object-cover"
+        className={fit}
       />
     </div>
   );

@@ -6,12 +6,56 @@ import Media from '@/components/primitives/Media';
 import type { Media as MediaType } from '@/lib/types';
 
 const PANELS: { media: MediaType; tall?: boolean }[] = [
-  { media: { alt: 'Roadshow in Bulawayo', kind: 'video', ratio: '16:9', tone: 'default', slot: 'Roadshow · Bulawayo' } },
-  { media: { alt: 'Product sampling', ratio: '4:5', tone: 'teal', slot: 'Sampling · Opal' }, tall: true },
-  { media: { alt: 'Retail activation', kind: 'video', ratio: '16:9', tone: 'ink', slot: 'Retail activation' } },
-  { media: { alt: 'Exhibition build', ratio: '4:5', tone: 'default', slot: 'Exhibition build' }, tall: true },
-  { media: { alt: 'Product launch', kind: 'video', ratio: '16:9', tone: 'teal', slot: 'Product launch' } },
-  { media: { alt: 'Promoter team', ratio: '3:2', tone: 'ink', slot: 'Promoter team' } },
+  {
+    media: {
+      src: '/images/events/fun-run-aerobics.jpg',
+      alt: 'A branded fun run warm-up, participants mid-session',
+      ratio: '16:9',
+      slot: 'Fun run · warm-up',
+    },
+  },
+  {
+    media: {
+      src: '/images/events/reinsurance-forum-handshake.jpg',
+      alt: 'A handshake in front of a sponsored media wall',
+      ratio: '4:5',
+      slot: 'Media wall',
+    },
+    tall: true,
+  },
+  {
+    media: {
+      src: '/images/events/reinsurance-forum-delegates.jpg',
+      alt: 'Delegates on stage in front of a branded sponsor wall',
+      ratio: '16:9',
+      slot: 'Conference · stage',
+    },
+  },
+  {
+    media: {
+      src: '/images/icz-591/launch-officials.jpg',
+      alt: 'Officials at the launch of the 591 emergency line',
+      ratio: '4:5',
+      slot: 'Launch · 591',
+    },
+    tall: true,
+  },
+  {
+    media: {
+      src: '/images/events/fun-run-finish.jpg',
+      alt: 'The branded finish gantry at a sponsored fun run',
+      ratio: '16:9',
+      slot: 'Finish gantry',
+    },
+  },
+  {
+    media: {
+      src: '/images/events/fun-run-group.jpg',
+      alt: 'The full participant group at a branded fun run',
+      ratio: '3:2',
+      slot: 'Participants',
+    },
+  },
 ];
 
 /**

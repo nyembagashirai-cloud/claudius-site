@@ -7,22 +7,43 @@ import type { Media as MediaType } from '@/lib/types';
 
 const TILES: { media: MediaType; className: string; depth: number }[] = [
   {
-    media: { alt: 'Opal consumer activation', ratio: '4:5', tone: 'teal', slot: 'Opal · activation' },
+    media: {
+      src: '/images/medtech/roadshow-stage.jpg',
+      alt: 'Dancers performing on a branded roadshow stage',
+      ratio: '4:5',
+      slot: 'Roadshow · stage',
+    },
     className: 'ht ht-1',
     depth: 26,
   },
   {
-    media: { alt: 'FMCG packaging design', ratio: '1:1', tone: 'default', slot: 'Packaging' },
+    media: {
+      src: '/images/opal/pack-2kg.png',
+      fit: 'contain',
+      alt: 'The Opal washing powder pack',
+      ratio: '4:5',
+      slot: 'Opal · packaging',
+    },
     className: 'ht ht-2',
     depth: 46,
   },
   {
-    media: { alt: 'Roadshow campaign film', kind: 'video', ratio: '16:9', tone: 'ink', slot: 'Roadshow · film' },
+    media: {
+      src: '/images/medtech/retail-activation.jpg',
+      alt: 'Branded activation gazebos outside a retail store',
+      ratio: '16:9',
+      slot: 'Retail activation',
+    },
     className: 'ht ht-3',
     depth: 34,
   },
   {
-    media: { alt: 'Retail point-of-sale', ratio: '3:2', tone: 'default', slot: 'Retail POS' },
+    media: {
+      src: '/images/icz-591/campaign-591.jpg',
+      alt: 'The 591 toll-free emergency campaign key visual',
+      ratio: '3:2',
+      slot: '591 · campaign',
+    },
     className: 'ht ht-4',
     depth: 18,
   },

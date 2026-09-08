@@ -5,8 +5,8 @@ import type { Project } from '@/lib/types';
  * (local preview, first deploy) the site reads these instead, so the
  * site is never blank.
  *
- * Every `Media` here has no `src` — it renders as a labelled placeholder
- * until real photography and video are uploaded.
+ * A `Media` entry with no `src` renders as a labelled placeholder, so a slot
+ * that has no photograph yet still holds its shape.
  */
 export const projects: Project[] = [
   /* ---------------------------------------------------------- OPAL */
@@ -21,7 +21,12 @@ export const projects: Project[] = [
     services: ['Brand Development', 'Packaging', 'Launch Strategy', 'Experiential', 'Merchandising', 'Digital'],
     shortDescription:
       'Building a washing powder brand from concept and packaging into a consumer-facing FMCG brand.',
-    hero: { alt: 'Opal washing powder campaign', ratio: '21:9', tone: 'teal', slot: 'Opal · campaign hero' },
+    hero: {
+      src: '/images/opal/activation-promoters.jpg',
+      alt: 'Claudius & Co. promoters presenting Opal washing powder at a consumer activation',
+      ratio: '21:9',
+      slot: 'Opal · activation',
+    },
     challenge: [
       'The opportunity was bigger than launching another washing powder.',
       'In a highly competitive homecare category, Opal needed a distinctive identity, credible packaging and a market-entry strategy capable of creating recognition quickly.',
@@ -49,7 +54,16 @@ export const projects: Project[] = [
       'The same identity consumers encountered online appeared on shelf and at activations. Physical experiences generated digital content. Merchandising connected awareness to purchase. Each touchpoint reinforced the next.',
     ],
     blocks: [
-      { type: 'media-full', media: { alt: 'Opal brand identity', ratio: '16:9', tone: 'teal', slot: 'Opal · brand identity' } },
+      {
+        type: 'media-full',
+        media: {
+          src: '/images/opal/pack-2kg.png',
+          fit: 'contain',
+          alt: 'The Opal washing powder 2kg pack',
+          ratio: '16:9',
+          slot: 'Opal · pack',
+        },
+      },
       {
         type: 'text',
         heading: '01 — Brand Development',
@@ -60,8 +74,19 @@ export const projects: Project[] = [
       },
       {
         type: 'media-split',
-        left:  { alt: 'Opal pack detail', ratio: '4:5', tone: 'default', slot: 'Opal · pack detail' },
-        right: { alt: 'Opal on shelf', ratio: '4:5', tone: 'ink', slot: 'Opal · on shelf' },
+        left: {
+          src: '/images/opal/mascot.png',
+          fit: 'contain',
+          alt: 'The Opal brand mascot in a laundry setting',
+          ratio: '4:5',
+          slot: 'Opal · brand character',
+        },
+        right: {
+          src: '/images/medtech/retail-activation.jpg',
+          alt: 'Branded activation gazebos outside a retail store',
+          ratio: '4:5',
+          slot: 'Retail · in front of store',
+        },
       },
       {
         type: 'text',
@@ -98,9 +123,24 @@ export const projects: Project[] = [
       {
         type: 'media-trio',
         items: [
-          { alt: 'Opal activation crowd', ratio: '1:1', tone: 'teal', slot: 'Activation · crowd' },
-          { alt: 'Opal product sampling', ratio: '1:1', tone: 'default', slot: 'Sampling' },
-          { alt: 'Opal promoter team', ratio: '1:1', tone: 'ink', slot: 'Promoter team' },
+          {
+            src: '/images/medtech/roadshow-stage.jpg',
+            alt: 'Dancers performing on the branded roadshow stage',
+            ratio: '1:1',
+            slot: 'Roadshow · stage',
+          },
+          {
+            src: '/images/medtech/roadshow-promoters.jpg',
+            alt: 'Promoters presenting product to the crowd at a roadshow',
+            ratio: '1:1',
+            slot: 'Roadshow · promoters',
+          },
+          {
+            src: '/images/silkea/sampling-gazebo.jpg',
+            alt: 'A sampling gazebo stocked with product, staffed by promoters',
+            ratio: '1:1',
+            slot: 'Sampling · gazebo',
+          },
         ],
       },
       { type: 'statement', lines: ['WE HELPED', 'BUILD IT.'], ground: 'teal' },
@@ -124,7 +164,15 @@ export const projects: Project[] = [
           'Support sales activity',
         ],
       },
-      { type: 'media-full', media: { alt: 'Opal roadshow footage', kind: 'video', ratio: '21:9', tone: 'ink', slot: 'Opal · activation film' } },
+      {
+        type: 'media-full',
+        media: {
+          src: '/images/medtech/roadshow-stage.jpg',
+          alt: 'The roadshow stage mid-performance, crowd gathered',
+          ratio: '21:9',
+          slot: 'Roadshow · stage',
+        },
+      },
       {
         type: 'text',
         heading: '05 — Retail + Digital',
@@ -136,8 +184,18 @@ export const projects: Project[] = [
       },
       {
         type: 'media-split',
-        left:  { alt: 'Opal retail merchandising', ratio: '3:2', tone: 'default', slot: 'Retail merchandising' },
-        right: { alt: 'Opal social creative', ratio: '3:2', tone: 'teal', slot: 'Social creative' },
+        left: {
+          src: '/images/medtech/retail-activation.jpg',
+          alt: 'Branded gazebos and merchandising at a retail activation',
+          ratio: '3:2',
+          slot: 'Retail · merchandising',
+        },
+        right: {
+          src: '/images/silkea/promo-key-visual.jpg',
+          alt: 'The One Big Promo campaign key visual',
+          ratio: '3:2',
+          slot: 'Campaign · key visual',
+        },
       },
       { type: 'statement', lines: ['THEN WE PUT IT', 'IN FRONT OF', 'THE CONSUMER.'], ground: 'ink' },
     ],
@@ -161,12 +219,33 @@ export const projects: Project[] = [
     disciplines: ['BRANDING', 'EXPERIENTIAL', 'DIGITAL', 'CONTENT', 'CAMPAIGNS'],
     services: ['Brand Launch', 'Experiential', 'Influencer Marketing', 'Retail', 'Content'],
     shortDescription: 'Introducing a new personal care brand through experience rather than advertising.',
-    hero: { alt: 'Silkéa launch campaign', ratio: '16:9', tone: 'default', slot: 'Silkéa · campaign hero' },
+    hero: {
+      src: '/images/silkea/sampling-gazebo.jpg',
+      alt: 'The Silkéa sampling gazebo with the full product range on display',
+      ratio: '16:9',
+      slot: 'Silkéa · sampling',
+    },
     challenge: ['A new personal care brand entering a category where consumers already have a routine — and a favourite.'],
     idea: ['Lead with experience. Let people feel the product before they are asked to believe a claim about it.'],
     whatWeDid: ['Brand Launch Strategy', 'Experiential Marketing', 'Influencer Marketing', 'Retail Activation', 'Content Creation', 'Social Media'],
     blocks: [
-      { type: 'media-full', media: { alt: 'Silkéa launch', ratio: '16:9', tone: 'default', slot: 'Silkéa · launch' } },
+      {
+        type: 'media-full',
+        media: {
+          src: '/images/silkea/promo-key-visual.jpg',
+          alt: 'The Silkéa One Big Promo campaign key visual',
+          ratio: '16:9',
+          slot: 'Silkéa · key visual',
+        },
+      },
+      {
+        type: 'media-trio',
+        items: [
+          { src: '/images/silkea/bottle-lagoon-bliss.png', fit: 'contain', alt: 'Silkéa Lagoon Bliss foam bath', ratio: '4:5', slot: 'Silkéa · Lagoon Bliss' },
+          { src: '/images/silkea/bottle-purple-pop.png', fit: 'contain', alt: 'Silkéa Purple Pop foam bath', ratio: '4:5', slot: 'Silkéa · Purple Pop' },
+          { src: '/images/silkea/bottle-golden-cacao.png', fit: 'contain', alt: 'Silkéa Golden Cacao foam bath', ratio: '4:5', slot: 'Silkéa · Golden Cacao' },
+        ],
+      },
       { type: 'statement', lines: ['FELT FIRST.', 'BOUGHT SECOND.'], ground: 'ink' },
     ],
     related: ['opal', 'medtech'],
@@ -183,11 +262,27 @@ export const projects: Project[] = [
     disciplines: ['STRATEGY', 'DIGITAL', 'CAMPAIGNS', 'EXPERIENTIAL'],
     services: ['Strategy', 'Digital', 'Campaigns', 'Experiential', '591 Consumer Awareness'],
     shortDescription: 'Taking insurance communication out of the boardroom and into the street.',
-    hero: { alt: 'ICZ 591 consumer awareness campaign', ratio: '3:2', tone: 'ink', slot: 'ICZ · 591 campaign' },
+    hero: {
+      src: '/images/icz-591/ambulance-handover.jpg',
+      alt: 'A 591-branded emergency ambulance being handed over',
+      ratio: '3:2',
+      slot: 'ICZ · 591 ambulance',
+    },
     challenge: ['Insurance is bought by institutions and misunderstood by consumers. The category speaks a language most people never learn.'],
     idea: ['Translate the category. Meet people where they already are, in the words they already use.'],
     whatWeDid: ['Communication Strategy', 'Campaign Development', 'Digital Marketing', 'Consumer Activations', '591 Consumer Awareness'],
-    blocks: [{ type: 'statement', lines: ['COVER MAKES SENSE', 'WHEN IT’S EXPLAINED', 'IN PUBLIC.'], ground: 'teal' }],
+    blocks: [
+      {
+        type: 'media-split',
+        left: { src: '/images/icz-591/campaign-591.jpg', alt: 'The 591 toll-free campaign key visual', ratio: '4:5', slot: '591 · campaign' },
+        right: { src: '/images/icz-591/festive-ambulances.jpg', alt: 'Festive season highway emergency support creative', ratio: '4:5', slot: '591 · festive' },
+      },
+      { type: 'statement', lines: ['COVER MAKES SENSE', 'WHEN IT’S EXPLAINED', 'IN PUBLIC.'], ground: 'teal' },
+      {
+        type: 'media-full',
+        media: { src: '/images/icz-591/launch-officials.jpg', alt: 'Officials at the 591 campaign launch', ratio: '16:9', slot: '591 · launch' },
+      },
+    ],
     related: ['opal', 'huletts'],
   },
 
@@ -198,7 +293,7 @@ export const projects: Project[] = [
     title: 'Turning Brand Presence Into Experience',
     year: 2024,
     featured: true,
-    order: 4,
+    order: 5,
     disciplines: ['EXPERIENTIAL', 'CAMPAIGNS', 'CONTENT'],
     services: ['Experiential', 'Exhibition Design', 'Brand Environments', 'Activations'],
     shortDescription: 'Exhibition design and brand environments that turn presence into participation.',
@@ -217,15 +312,39 @@ export const projects: Project[] = [
     title: 'Building Consumer Brands Across Categories',
     year: 2025,
     featured: true,
-    order: 5,
+    order: 4,
     disciplines: ['STRATEGY', 'BRANDING', 'PACKAGING', 'DIGITAL', 'CONTENT', 'EXPERIENTIAL'],
     services: ['Strategy', 'Brand Development', 'Packaging', 'Digital', 'Content', 'Experiential'],
     shortDescription: 'A multi-brand portfolio built, packaged, launched and marketed across categories.',
-    hero: { alt: 'Medtech Group brand portfolio', ratio: '4:5', tone: 'teal', slot: 'Medtech · portfolio' },
+    hero: {
+      src: '/images/medtech/roadshow-promoters.jpg',
+      alt: 'Promoters presenting the Medtech consumer brand range at a roadshow',
+      ratio: '4:5',
+      slot: 'Medtech · roadshow',
+    },
     challenge: ['A distribution group with strong products and a portfolio of brands that were not yet behaving like brands.'],
     idea: ['Treat the portfolio as a system: shared strategic discipline, distinct consumer personalities.'],
     whatWeDid: ['Marketing & PR Strategy', 'Brand Development', 'Product & Packaging Development', 'Social Media Strategy & Management', 'Content Creation', 'Google Ads & Analytics', 'Product Activations & Experiential Shopping'],
-    blocks: [{ type: 'statement', lines: ['ONE DISCIPLINE.', 'MANY BRANDS.'], ground: 'teal' }],
+    blocks: [
+      {
+        type: 'media-trio',
+        items: [
+          { src: '/images/medtech/satiskin-berry-fantasy.png', fit: 'contain', alt: 'Satiskin Berry Fantasy bubble bath pouch', ratio: '4:5', slot: 'Satiskin · Berry Fantasy' },
+          { src: '/images/medtech/satiskin-ocean-paradise.png', fit: 'contain', alt: 'Satiskin Ocean Paradise bubble bath pouch', ratio: '4:5', slot: 'Satiskin · Ocean Paradise' },
+          { src: '/images/medtech/satiskin-cocoa-butter.png', fit: 'contain', alt: 'Satiskin Cocoa Butter bubble bath pouch', ratio: '4:5', slot: 'Satiskin · Cocoa Butter' },
+        ],
+      },
+      { type: 'statement', lines: ['ONE DISCIPLINE.', 'MANY BRANDS.'], ground: 'teal' },
+      {
+        type: 'media-split',
+        left: { src: '/images/medtech/eilts-enchante.jpg', alt: 'E.IL.T\u2019S Enchanté fragrance, boxed and bottled', ratio: '4:5', slot: 'E.IL.T\u2019S · Enchanté' },
+        right: { src: '/images/medtech/eilts-grandiose.jpg', alt: 'E.IL.T\u2019S Grandiose fragrance, boxed and bottled', ratio: '4:5', slot: 'E.IL.T\u2019S · Grandiose' },
+      },
+      {
+        type: 'media-full',
+        media: { src: '/images/medtech/eilts-enchante-macro.jpg', alt: 'Macro detail of the Enchanté bottle', ratio: '21:9', slot: 'E.IL.T\u2019S · detail' },
+      },
+    ],
     related: ['opal', 'silkea'],
   },
 
@@ -306,4 +425,4 @@ export const projects: Project[] = [
   },
 ];
 
-export const featuredSlugs = ['opal', 'silkea', 'icz-591', 'huletts', 'medtech'];
+export const featuredSlugs = ['opal', 'silkea', 'icz-591', 'medtech', 'huletts'];

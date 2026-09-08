@@ -9,4 +9,257 @@ export interface ManifestEntry {
   bytes: number;
 }
 
-export const mediaManifest: ManifestEntry[] = [];
+export const mediaManifest: ManifestEntry[] = [
+  {
+    "url": "/images/events/fun-run-aerobics.jpg",
+    "name": "fun-run-aerobics.jpg",
+    "folder": "events",
+    "kind": "image",
+    "bytes": 518874
+  },
+  {
+    "url": "/images/events/fun-run-finish.jpg",
+    "name": "fun-run-finish.jpg",
+    "folder": "events",
+    "kind": "image",
+    "bytes": 541200
+  },
+  {
+    "url": "/images/events/fun-run-group.jpg",
+    "name": "fun-run-group.jpg",
+    "folder": "events",
+    "kind": "image",
+    "bytes": 654680
+  },
+  {
+    "url": "/images/events/reinsurance-forum-delegates.jpg",
+    "name": "reinsurance-forum-delegates.jpg",
+    "folder": "events",
+    "kind": "image",
+    "bytes": 570173
+  },
+  {
+    "url": "/images/events/reinsurance-forum-handshake.jpg",
+    "name": "reinsurance-forum-handshake.jpg",
+    "folder": "events",
+    "kind": "image",
+    "bytes": 454821
+  },
+  {
+    "url": "/images/icz-591/ambulance-handover.jpg",
+    "name": "ambulance-handover.jpg",
+    "folder": "icz-591",
+    "kind": "image",
+    "bytes": 479715
+  },
+  {
+    "url": "/images/icz-591/campaign-591.jpg",
+    "name": "campaign-591.jpg",
+    "folder": "icz-591",
+    "kind": "image",
+    "bytes": 230595
+  },
+  {
+    "url": "/images/icz-591/festive-ambulances.jpg",
+    "name": "festive-ambulances.jpg",
+    "folder": "icz-591",
+    "kind": "image",
+    "bytes": 146427
+  },
+  {
+    "url": "/images/icz-591/launch-officials.jpg",
+    "name": "launch-officials.jpg",
+    "folder": "icz-591",
+    "kind": "image",
+    "bytes": 375727
+  },
+  {
+    "url": "/images/icz-591/quarterly-digest.png",
+    "name": "quarterly-digest.png",
+    "folder": "icz-591",
+    "kind": "image",
+    "bytes": 1292254
+  },
+  {
+    "url": "/images/icz-591/spokespeople.jpg",
+    "name": "spokespeople.jpg",
+    "folder": "icz-591",
+    "kind": "image",
+    "bytes": 321188
+  },
+  {
+    "url": "/images/medtech/eilts-amour.jpg",
+    "name": "eilts-amour.jpg",
+    "folder": "medtech",
+    "kind": "image",
+    "bytes": 198806
+  },
+  {
+    "url": "/images/medtech/eilts-enchante-macro.jpg",
+    "name": "eilts-enchante-macro.jpg",
+    "folder": "medtech",
+    "kind": "image",
+    "bytes": 190938
+  },
+  {
+    "url": "/images/medtech/eilts-enchante.jpg",
+    "name": "eilts-enchante.jpg",
+    "folder": "medtech",
+    "kind": "image",
+    "bytes": 272128
+  },
+  {
+    "url": "/images/medtech/eilts-grandiose.jpg",
+    "name": "eilts-grandiose.jpg",
+    "folder": "medtech",
+    "kind": "image",
+    "bytes": 215469
+  },
+  {
+    "url": "/images/medtech/eilts-still-life.jpg",
+    "name": "eilts-still-life.jpg",
+    "folder": "medtech",
+    "kind": "image",
+    "bytes": 189780
+  },
+  {
+    "url": "/images/medtech/retail-activation.jpg",
+    "name": "retail-activation.jpg",
+    "folder": "medtech",
+    "kind": "image",
+    "bytes": 637472
+  },
+  {
+    "url": "/images/medtech/roadshow-promoters.jpg",
+    "name": "roadshow-promoters.jpg",
+    "folder": "medtech",
+    "kind": "image",
+    "bytes": 677251
+  },
+  {
+    "url": "/images/medtech/roadshow-stage.jpg",
+    "name": "roadshow-stage.jpg",
+    "folder": "medtech",
+    "kind": "image",
+    "bytes": 742132
+  },
+  {
+    "url": "/images/medtech/satiskin-berry-fantasy.png",
+    "name": "satiskin-berry-fantasy.png",
+    "folder": "medtech",
+    "kind": "image",
+    "bytes": 1226152
+  },
+  {
+    "url": "/images/medtech/satiskin-cocoa-butter.png",
+    "name": "satiskin-cocoa-butter.png",
+    "folder": "medtech",
+    "kind": "image",
+    "bytes": 1307779
+  },
+  {
+    "url": "/images/medtech/satiskin-ocean-paradise.png",
+    "name": "satiskin-ocean-paradise.png",
+    "folder": "medtech",
+    "kind": "image",
+    "bytes": 1373844
+  },
+  {
+    "url": "/images/medtech/satiskin-peach-blossom.png",
+    "name": "satiskin-peach-blossom.png",
+    "folder": "medtech",
+    "kind": "image",
+    "bytes": 1200328
+  },
+  {
+    "url": "/images/medtech/satiskin-wild-rose.png",
+    "name": "satiskin-wild-rose.png",
+    "folder": "medtech",
+    "kind": "image",
+    "bytes": 524413
+  },
+  {
+    "url": "/images/opal/activation-promoters.jpg",
+    "name": "activation-promoters.jpg",
+    "folder": "opal",
+    "kind": "image",
+    "bytes": 685522
+  },
+  {
+    "url": "/images/opal/logo.png",
+    "name": "logo.png",
+    "folder": "opal",
+    "kind": "image",
+    "bytes": 201259
+  },
+  {
+    "url": "/images/opal/mascot.png",
+    "name": "mascot.png",
+    "folder": "opal",
+    "kind": "image",
+    "bytes": 2261965
+  },
+  {
+    "url": "/images/opal/pack-2kg.png",
+    "name": "pack-2kg.png",
+    "folder": "opal",
+    "kind": "image",
+    "bytes": 1212619
+  },
+  {
+    "url": "/images/silkea/bottle-apricot-bloom.png",
+    "name": "bottle-apricot-bloom.png",
+    "folder": "silkea",
+    "kind": "image",
+    "bytes": 775120
+  },
+  {
+    "url": "/images/silkea/bottle-berrylicious.png",
+    "name": "bottle-berrylicious.png",
+    "folder": "silkea",
+    "kind": "image",
+    "bytes": 728668
+  },
+  {
+    "url": "/images/silkea/bottle-golden-cacao.png",
+    "name": "bottle-golden-cacao.png",
+    "folder": "silkea",
+    "kind": "image",
+    "bytes": 824289
+  },
+  {
+    "url": "/images/silkea/bottle-lagoon-bliss.png",
+    "name": "bottle-lagoon-bliss.png",
+    "folder": "silkea",
+    "kind": "image",
+    "bytes": 804935
+  },
+  {
+    "url": "/images/silkea/bottle-purple-pop.png",
+    "name": "bottle-purple-pop.png",
+    "folder": "silkea",
+    "kind": "image",
+    "bytes": 805832
+  },
+  {
+    "url": "/images/silkea/logo.png",
+    "name": "logo.png",
+    "folder": "silkea",
+    "kind": "image",
+    "bytes": 69301
+  },
+  {
+    "url": "/images/silkea/promo-key-visual.jpg",
+    "name": "promo-key-visual.jpg",
+    "folder": "silkea",
+    "kind": "image",
+    "bytes": 311334
+  },
+  {
+    "url": "/images/silkea/sampling-gazebo.jpg",
+    "name": "sampling-gazebo.jpg",
+    "folder": "silkea",
+    "kind": "image",
+    "bytes": 572835
+  }
+];

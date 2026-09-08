@@ -157,7 +157,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .ph-corner { position:absolute; z-index:2; width:14px; height:14px; border:1px solid rgba(182,226,234,.4); }
 .ph-corner.tl { top:12px; left:12px; border-right:0; border-bottom:0; }
 .ph-corner.br { bottom:12px; right:12px; border-left:0; border-top:0; }
-.ph-fill { position:absolute; inset:0; }
+.ph-fill,
+.media-fill { position:absolute; inset:0; }
 
 /* ============================================================
    REDUCED MOTION — the site stops moving, nothing is lost
@@ -297,7 +298,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .ht { position: absolute; overflow: hidden; will-change: transform; }
 .ht-1 { top: 13%; right: 2%;  width: min(21.5vw, 300px); }
-.ht-2 { top: 8%;  right: 31%; width: min(12vw, 158px); }
+.ht-2 { top: 6%;  right: 30%; width: min(15vw, 208px); }
 .ht-3 { bottom: 11%; right: 5%; width: min(21vw, 285px); }
 .ht-4 { top: 12%; left: 1.5%; width: min(11.5vw, 160px); }
 @media (max-width: 900px) {

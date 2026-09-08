@@ -22,6 +22,11 @@ export interface Media {
   ratio: Ratio;
   poster?: string;
   tone?: Tone;
+  /**
+   * `cover` (the default) crops to fill the slot. Use `contain` for cutouts —
+   * packshots, bottles, logos — where cropping would sever the product.
+   */
+  fit?: 'cover' | 'contain';
   /** Short label shown on the placeholder, e.g. "Opal · activation". */
   slot?: string;
 }
