@@ -12,7 +12,7 @@ const LAYOUTS: WorkCardLayout[] = [
   { col: '1 / 10', ratio: '16:9', sizes: '(max-width: 900px) 100vw, 75vw' },
   { col: '6 / 13', ratio: '3:2',  sizes: '(max-width: 900px) 100vw, 58vw' },
   { col: '1 / 9',  ratio: '16:9', sizes: '(max-width: 900px) 100vw, 66vw' },
-  { col: '4 / 13', ratio: '16:9', sizes: '(max-width: 900px) 100vw, 75vw' },
+  { col: '4 / 11', ratio: '4:5',  sizes: '(max-width: 900px) 100vw, 58vw' },
 ];
 
 export default function SelectedWork({ projects, total }: { projects: Project[]; total: number }) {

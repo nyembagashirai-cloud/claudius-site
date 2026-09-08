@@ -8,11 +8,12 @@
  *
  *   npm run media:apply
  *
- * It only touches projects whose seed entry actually references a file, and it
- * REPLACES the narrative blocks on those projects. Any block re-ordering or
- * copy edit made in the CMS for those case studies will be overwritten, so run
- * it while placement is still being worked out, not after someone has edited a
- * case study by hand.
+ * It only touches projects whose seed entry actually references a file, and on
+ * those it REPLACES the narrative blocks, the featured flag and the running
+ * order, and re-syncs each media row's alt text, ratio and framing. Any block
+ * re-ordering, copy edit or running-order change made in the CMS for those case
+ * studies will be overwritten, so run it while placement is still being worked
+ * out, not after someone has edited a case study by hand.
  */
 import { PrismaClient } from '@prisma/client';
 import { projects } from '../src/content/projects';
@@ -31,16 +32,18 @@ function mediaIn(block: ContentBlock): Media[] {
 
 async function ensureMedia(m: Media) {
   if (!m.src) return null;
+  const data = {
+    url: m.src,
+    kind: m.kind === 'video' ? 'video' : 'image',
+    alt: m.alt,
+    ratio: m.ratio,
+    fit: m.fit ?? 'cover',
+  };
   const existing = await prisma.media.findFirst({ where: { url: m.src } });
-  if (existing) return existing;
-  return prisma.media.create({
-    data: {
-      url: m.src,
-      kind: m.kind === 'video' ? 'video' : 'image',
-      alt: m.alt,
-      ratio: m.ratio,
-    },
-  });
+  // Keep an existing row's identity — projects point at it — but bring its
+  // alt, ratio and framing back in line with the seed.
+  if (existing) return prisma.media.update({ where: { id: existing.id }, data });
+  return prisma.media.create({ data });
 }
 
 async function main() {
@@ -76,6 +79,8 @@ async function main() {
       data: {
         heroMediaId: hero?.id ?? row.heroMediaId,
         blocks: project.blocks as unknown as object,
+        featured: project.featured,
+        order: project.order,
       },
     });
 

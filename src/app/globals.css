@@ -461,7 +461,16 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
    CASE STUDY
    ============================================================ */
 .case-hero-media { position:relative; width:100%; aspect-ratio: 21 / 9; overflow:hidden; }
-@media (max-width: 700px) { .case-hero-media { aspect-ratio: 4 / 5; } }
+/* A contained hero — a portrait shot shown whole — needs height, not width. */
+.case-hero-media[data-portrait] {
+  aspect-ratio: 16 / 9;
+  background: var(--color-charcoal);
+  padding-block: clamp(20px, 4vh, 48px);
+}
+@media (max-width: 700px) {
+  .case-hero-media { aspect-ratio: 4 / 5; }
+  .case-hero-media[data-portrait] { aspect-ratio: 4 / 5; }
+}
 
 .case-columns {
   display:grid; grid-template-columns: repeat(2, minmax(0,1fr));

@@ -297,11 +297,19 @@ export const projects: Project[] = [
     disciplines: ['EXPERIENTIAL', 'CAMPAIGNS', 'CONTENT'],
     services: ['Experiential', 'Exhibition Design', 'Brand Environments', 'Activations'],
     shortDescription: 'Exhibition design and brand environments that turn presence into participation.',
-    hero: { alt: 'Huletts brand environment', ratio: '16:9', tone: 'teal', slot: 'Huletts · exhibition' },
+    hero: {
+      src: '/images/huletts/inflatable-pack.jpg',
+      fit: 'contain',
+      alt: 'A giant inflatable Huletts SunSweet brown sugar pack standing in a branded show environment, cut cane laid at its base',
+      ratio: '4:5',
+      slot: 'Huletts · installation',
+    },
     challenge: ['A well-known brand present at every event — and remembered from none of them.'],
     idea: ['Stop building stands. Start building environments people want to stand inside.'],
     whatWeDid: ['Exhibition Design', 'Brand Environments', 'Activation Concept', 'On-Ground Execution', 'Content Capture'],
-    blocks: [{ type: 'statement', lines: ['PRESENCE IS NOT', 'THE SAME AS', 'PARTICIPATION.'], ground: 'ink' }],
+    blocks: [
+      { type: 'statement', lines: ['PRESENCE IS NOT', 'THE SAME AS', 'PARTICIPATION.'], ground: 'ink' },
+    ],
     related: ['opal', 'medtech'],
   },
 

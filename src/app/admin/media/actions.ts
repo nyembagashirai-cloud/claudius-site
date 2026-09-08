@@ -28,6 +28,7 @@ export async function addMediaByUrl(formData: FormData) {
       url,
       alt: String(formData.get('alt') ?? '').trim(),
       ratio: String(formData.get('ratio') ?? '16:9'),
+      fit: formData.get('fit') === 'contain' ? 'contain' : 'cover',
       kind: /\.(mp4|webm|mov)(\?|$)/i.test(url) ? 'video' : 'image',
     },
   });

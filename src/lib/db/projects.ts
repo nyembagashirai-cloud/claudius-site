@@ -2,7 +2,14 @@ import { prisma, resilient } from './client';
 import type { ContentBlock, Discipline, Media, Project } from '@/lib/types';
 
 type Row = Awaited<ReturnType<typeof prisma.project.findMany>>[number] & {
-  hero?: { url: string; kind: string; alt: string; ratio: string; poster: string | null } | null;
+  hero?: {
+    url: string;
+    kind: string;
+    alt: string;
+    ratio: string;
+    fit?: string | null;
+    poster: string | null;
+  } | null;
 };
 
 function toMedia(hero: Row['hero'], fallbackAlt: string, slot?: string): Media {
@@ -12,6 +19,7 @@ function toMedia(hero: Row['hero'], fallbackAlt: string, slot?: string): Media {
     kind: hero.kind === 'video' ? 'video' : 'image',
     alt: hero.alt || fallbackAlt,
     ratio: (hero.ratio as Media['ratio']) ?? '16:9',
+    fit: hero.fit === 'contain' ? 'contain' : undefined,
     poster: hero.poster ?? undefined,
   };
 }

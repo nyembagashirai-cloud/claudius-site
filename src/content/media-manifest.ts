@@ -46,6 +46,13 @@ export const mediaManifest: ManifestEntry[] = [
     "bytes": 454821
   },
   {
+    "url": "/images/huletts/inflatable-pack.jpg",
+    "name": "inflatable-pack.jpg",
+    "folder": "huletts",
+    "kind": "image",
+    "bytes": 172732
+  },
+  {
     "url": "/images/icz-591/ambulance-handover.jpg",
     "name": "ambulance-handover.jpg",
     "folder": "icz-591",
@@ -86,6 +93,97 @@ export const mediaManifest: ManifestEntry[] = [
     "folder": "icz-591",
     "kind": "image",
     "bytes": 321188
+  },
+  {
+    "url": "/images/logos/Clere for men logo-21.png",
+    "name": "Clere for men logo-21.png",
+    "folder": "logos",
+    "kind": "image",
+    "bytes": 278307
+  },
+  {
+    "url": "/images/logos/F&C PROPERTY PASSPORT LOGO-01.png",
+    "name": "F&C PROPERTY PASSPORT LOGO-01.png",
+    "folder": "logos",
+    "kind": "image",
+    "bytes": 437594
+  },
+  {
+    "url": "/images/logos/ICZ logo curves-01.png",
+    "name": "ICZ logo curves-01.png",
+    "folder": "logos",
+    "kind": "image",
+    "bytes": 10043
+  },
+  {
+    "url": "/images/logos/logos-01.png",
+    "name": "logos-01.png",
+    "folder": "logos",
+    "kind": "image",
+    "bytes": 221018
+  },
+  {
+    "url": "/images/logos/logos-02.png",
+    "name": "logos-02.png",
+    "folder": "logos",
+    "kind": "image",
+    "bytes": 306042
+  },
+  {
+    "url": "/images/logos/logos-03.png",
+    "name": "logos-03.png",
+    "folder": "logos",
+    "kind": "image",
+    "bytes": 214858
+  },
+  {
+    "url": "/images/logos/logos-04.png",
+    "name": "logos-04.png",
+    "folder": "logos",
+    "kind": "image",
+    "bytes": 956448
+  },
+  {
+    "url": "/images/logos/logos-05.png",
+    "name": "logos-05.png",
+    "folder": "logos",
+    "kind": "image",
+    "bytes": 214605
+  },
+  {
+    "url": "/images/logos/logos-07.png",
+    "name": "logos-07.png",
+    "folder": "logos",
+    "kind": "image",
+    "bytes": 380535
+  },
+  {
+    "url": "/images/logos/logos-08.png",
+    "name": "logos-08.png",
+    "folder": "logos",
+    "kind": "image",
+    "bytes": 267115
+  },
+  {
+    "url": "/images/logos/MD MAINLINE LOGOS-07.png",
+    "name": "MD MAINLINE LOGOS-07.png",
+    "folder": "logos",
+    "kind": "image",
+    "bytes": 88195
+  },
+  {
+    "url": "/images/logos/Red Huletts logo.png",
+    "name": "Red Huletts logo.png",
+    "folder": "logos",
+    "kind": "image",
+    "bytes": 1592198
+  },
+  {
+    "url": "/images/logos/SIC LOGO-01.png",
+    "name": "SIC LOGO-01.png",
+    "folder": "logos",
+    "kind": "image",
+    "bytes": 106513
   },
   {
     "url": "/images/medtech/eilts-amour.jpg",

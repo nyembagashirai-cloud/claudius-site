@@ -51,6 +51,8 @@ model Media {
   kind      String    @default("image")
   alt       String
   ratio     String    @default("16:9")
+  /** "cover" crops to fill the slot; "contain" shows the whole frame. */
+  fit       String    @default("cover")
   poster    String?
   width     Int?
   height    Int?

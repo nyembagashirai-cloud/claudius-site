@@ -82,6 +82,13 @@ export default async function AdminMedia() {
                 ))}
               </select>
             </div>
+            <div className="a-field">
+              <label htmlFor="fit">Framing</label>
+              <select id="fit" name="fit" defaultValue="cover">
+                <option value="cover">Crop to fill</option>
+                <option value="contain">Show the whole frame</option>
+              </select>
+            </div>
           </div>
           <button type="submit" className="a-btn ghost">
             Add
@@ -111,6 +118,7 @@ export default async function AdminMedia() {
                 <p>{m.alt || m.url.split('/').pop()}</p>
                 <p>
                   {m.ratio} · {m.kind}
+                  {m.fit === 'contain' ? ' · whole frame' : ''}
                 </p>
                 <form action={deleteMedia} style={{ padding: '0 10px 10px' }}>
                   <input type="hidden" name="id" value={m.id} />

@@ -22,7 +22,10 @@ export default function CaseHero({ project }: { project: Project }) {
         </div>
       </div>
 
-      <div className="case-hero-media">
+      <div
+        className="case-hero-media"
+        data-portrait={project.hero.fit === 'contain' ? 'true' : undefined}
+      >
         <Media media={project.hero} sizes="100vw" priority fill />
       </div>
     </section>
