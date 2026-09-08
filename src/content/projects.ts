@@ -22,10 +22,10 @@ export const projects: Project[] = [
     shortDescription:
       'Building a washing powder brand from concept and packaging into a consumer-facing FMCG brand.',
     hero: {
-      src: '/images/opal/activation-dance.jpg',
-      alt: 'Promoters dancing in front of the branded Opal roadshow truck at a consumer activation',
+      src: '/images/opal/in-store-shoppers.jpg',
+      alt: 'Two shoppers in store holding Opal packs and a promotion slip',
       ratio: '21:9',
-      slot: 'Opal · roadshow',
+      slot: 'Opal · in the basket',
     },
     challenge: [
       'The opportunity was bigger than launching another washing powder.',
@@ -124,10 +124,10 @@ export const projects: Project[] = [
         type: 'media-trio',
         items: [
           {
-            src: '/images/opal/activation-promoters.jpg',
-            alt: 'Opal promoters lined up behind the ONE BIG PROMO prize display',
+            src: '/images/opal/trolley-shopper.jpg',
+            alt: 'A shopper with a trolley loaded with Opal packs at a branded stand',
             ratio: '1:1',
-            slot: 'Opal · promoters',
+            slot: 'Opal · in the trolley',
           },
           {
             src: '/images/opal/activation-table.jpg',
@@ -167,10 +167,10 @@ export const projects: Project[] = [
       {
         type: 'media-full',
         media: {
-          src: '/images/opal/activation-dance-wide.jpg',
-          alt: 'Promoters dancing with the product range at the Opal roadshow',
+          src: '/images/opal/activation-promoters.jpg',
+          alt: 'Opal promoters lined up behind the ONE BIG PROMO prize display',
           ratio: '21:9',
-          slot: 'Opal · roadshow',
+          slot: 'Opal · promoters',
         },
       },
       {
@@ -195,21 +195,6 @@ export const projects: Project[] = [
           alt: 'Opal packs merchandised across a supermarket laundry aisle',
           ratio: '4:5',
           slot: 'Opal · facings',
-        },
-      },
-      {
-        type: 'media-split',
-        left: {
-          src: '/images/opal/trolley-shopper.jpg',
-          alt: 'A shopper with a trolley loaded with Opal packs at a branded stand',
-          ratio: '4:5',
-          slot: 'Opal · in the trolley',
-        },
-        right: {
-          src: '/images/opal/in-store-shoppers.jpg',
-          alt: 'Two shoppers holding Opal packs and a promotion slip in store',
-          ratio: '4:5',
-          slot: 'Opal · bought',
         },
       },
       { type: 'statement', lines: ['THEN WE PUT IT', 'IN FRONT OF', 'THE CONSUMER.'], ground: 'ink' },
@@ -357,6 +342,16 @@ export const projects: Project[] = [
           { src: '/images/medtech/satiskin-cocoa-butter.png', fit: 'contain', alt: 'Satiskin Cocoa Butter bubble bath pouch', ratio: '4:5', slot: 'Satiskin · Cocoa Butter' },
         ],
       },
+      {
+        type: 'media-full',
+        media: {
+          src: '/images/medtech/roadshow-dance.jpg',
+          alt: 'Dancers performing in front of a roadshow truck carrying the full brand range',
+          ratio: '21:9',
+          slot: 'Medtech · roadshow',
+        },
+        caption: 'One truck, one crowd, the whole portfolio.',
+      },
       { type: 'statement', lines: ['ONE DISCIPLINE.', 'MANY BRANDS.'], ground: 'teal' },
       {
         type: 'media-split',
@@ -366,6 +361,15 @@ export const projects: Project[] = [
       {
         type: 'media-full',
         media: { src: '/images/medtech/eilts-enchante-macro.jpg', alt: 'Macro detail of the Enchanté bottle', ratio: '21:9', slot: 'E.IL.T\u2019S · detail' },
+      },
+      {
+        type: 'media-full',
+        media: {
+          src: '/images/medtech/roadshow-dance-wide.jpg',
+          alt: 'Promoters dancing with the product range at the roadshow',
+          ratio: '21:9',
+          slot: 'Medtech · roadshow',
+        },
       },
     ],
     related: ['opal', 'silkea'],

@@ -235,6 +235,20 @@ export const mediaManifest: ManifestEntry[] = [
     "bytes": 637472
   },
   {
+    "url": "/images/medtech/roadshow-dance-wide.jpg",
+    "name": "roadshow-dance-wide.jpg",
+    "folder": "medtech",
+    "kind": "image",
+    "bytes": 852052
+  },
+  {
+    "url": "/images/medtech/roadshow-dance.jpg",
+    "name": "roadshow-dance.jpg",
+    "folder": "medtech",
+    "kind": "image",
+    "bytes": 939915
+  },
+  {
     "url": "/images/medtech/roadshow-promoters.jpg",
     "name": "roadshow-promoters.jpg",
     "folder": "medtech",
@@ -275,20 +289,6 @@ export const mediaManifest: ManifestEntry[] = [
     "folder": "medtech",
     "kind": "image",
     "bytes": 524413
-  },
-  {
-    "url": "/images/opal/activation-dance-wide.jpg",
-    "name": "activation-dance-wide.jpg",
-    "folder": "opal",
-    "kind": "image",
-    "bytes": 852052
-  },
-  {
-    "url": "/images/opal/activation-dance.jpg",
-    "name": "activation-dance.jpg",
-    "folder": "opal",
-    "kind": "image",
-    "bytes": 939915
   },
   {
     "url": "/images/opal/activation-promoters.jpg",
