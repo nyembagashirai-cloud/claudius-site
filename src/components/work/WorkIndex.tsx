@@ -73,8 +73,12 @@ export default function WorkIndex({ projects }: { projects: Project[] }) {
       ) : null}
 
       <div className="work-grid">
-        {filtered.map((project, i) => (
-          <Reveal key={project.slug} delay={(i % 3) * 70} className={i % 5 === 0 ? 'work-tile-wide' : undefined}>
+        {filtered.map((project, i) => {
+          // Every fifth tile spans two of the three columns. Telling the
+          // browser otherwise makes it fetch a file too small for the slot.
+          const wide = i % 5 === 0;
+          return (
+          <Reveal key={project.slug} delay={(i % 3) * 70} className={wide ? 'work-tile-wide' : undefined}>
             <Link href={`/work/${project.slug}`} className="work-tile group" data-cursor="View">
               <div
                 className="work-tile-media"
@@ -82,7 +86,11 @@ export default function WorkIndex({ projects }: { projects: Project[] }) {
               >
                 <Media
                   media={{ ...project.hero, ratio: i % 3 === 1 ? '4:5' : '16:9' }}
-                  sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  sizes={
+                    wide
+                      ? '(max-width: 1200px) 100vw, 68vw'
+                      : '(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 34vw'
+                  }
                   fill
                 />
               </div>
@@ -96,7 +104,8 @@ export default function WorkIndex({ projects }: { projects: Project[] }) {
               <p className="t-index mt-2.5 text-white/60">{project.services.slice(0, 4).join(' · ')}</p>
             </Link>
           </Reveal>
-        ))}
+          );
+        })}
       </div>
 
       {filtered.length === 0 ? (

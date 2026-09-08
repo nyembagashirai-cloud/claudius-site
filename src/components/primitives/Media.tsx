@@ -14,6 +14,9 @@ interface MediaProps {
   /** Responsive `sizes` hint — always pass one for anything not full-bleed. */
   sizes?: string;
   priority?: boolean;
+  /** JPEG/WebP quality. 82 reads noticeably cleaner than Next's 75 default
+   *  on photography, for roughly a third more bytes. */
+  quality?: number;
   className?: string;
   /** Fill the parent instead of establishing its own aspect ratio. */
   fill?: boolean;
@@ -31,6 +34,7 @@ export default function Media({
   media,
   sizes = '100vw',
   priority = false,
+  quality = 82,
   className = '',
   fill = false,
 }: MediaProps) {
@@ -86,6 +90,7 @@ export default function Media({
         alt={media.alt}
         fill
         sizes={sizes}
+        quality={quality}
         priority={priority}
         className={fit}
       />
