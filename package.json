@@ -17,7 +17,8 @@
     "db:seed": "dotenv -e .env.local -- tsx prisma/seed.ts",
     "db:studio": "dotenv -e .env.local -- prisma studio",
     "media:index": "node scripts/build-media-manifest.mjs",
-    "media:apply": "dotenv -e .env.local -- tsx scripts/apply-media.ts"
+    "media:apply": "dotenv -e .env.local -- tsx scripts/apply-media.ts",
+    "projects:remove": "dotenv -e .env.local -- tsx scripts/remove-projects.ts"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.3.0",

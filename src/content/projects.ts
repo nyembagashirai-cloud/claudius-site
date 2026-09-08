@@ -374,63 +374,6 @@ export const projects: Project[] = [
     blocks: [],
     related: ['medtech'],
   },
-
-  /* ------------------------------------------------- THE CHEESEMAN */
-  {
-    slug: 'the-cheeseman',
-    client: 'THE CHEESEMAN',
-    title: 'A Small Brand With a Big Appetite',
-    year: 2024,
-    featured: false,
-    order: 7,
-    disciplines: ['WEB', 'DIGITAL', 'CONTENT'],
-    services: ['Website Development', 'Social Media Strategy & Management', 'Content Creation'],
-    shortDescription: 'Website, social and content for a specialist food brand.',
-    hero: { alt: 'The Cheeseman', ratio: '4:5', tone: 'default', slot: 'The Cheeseman · content' },
-    challenge: ['A specialist product with a loyal following and no shopfront online.'],
-    idea: ['Make the craft visible.'],
-    whatWeDid: ['Website Development', 'Social Media Management', 'Content Creation'],
-    blocks: [],
-    related: ['clouds-to-you'],
-  },
-
-  /* ------------------------------------------------- CLOUDS TO YOU */
-  {
-    slug: 'clouds-to-you',
-    client: 'CLOUDS TO YOU',
-    title: 'Packaging a Product People Share',
-    year: 2024,
-    featured: false,
-    order: 8,
-    disciplines: ['PACKAGING', 'CONTENT', 'DIGITAL'],
-    services: ['Packaging Design', 'Social Media Strategy & Management', 'Content Creation'],
-    shortDescription: 'Packaging design and social content for a consumer brand built on sharing.',
-    hero: { alt: 'Clouds To You packaging', ratio: '1:1', tone: 'teal', slot: 'Clouds To You · packaging' },
-    challenge: ['A product bought as a gift, packaged as a commodity.'],
-    idea: ['Design the pack for the moment it is handed over.'],
-    whatWeDid: ['Packaging Design', 'Social Media Management', 'Content Creation'],
-    blocks: [],
-    related: ['the-cheeseman'],
-  },
-
-  /* ----------------------------------------------------- TURTLE FIT */
-  {
-    slug: 'turtle-fit',
-    client: 'TURTLE FIT',
-    title: 'Getting a Fitness Brand Online',
-    year: 2024,
-    featured: false,
-    order: 9,
-    disciplines: ['WEB', 'DIGITAL', 'CONTENT'],
-    services: ['Website Development', 'Social Media Strategy & Management', 'Content Creation'],
-    shortDescription: 'Website and social for a fitness brand building an audience.',
-    hero: { alt: 'Turtle Fit', ratio: '16:9', tone: 'ink', slot: 'Turtle Fit · site & social' },
-    challenge: ['An energetic brand with no digital home.'],
-    idea: ['Put the energy where people already scroll.'],
-    whatWeDid: ['Website Development', 'Social Media Strategy', 'Content Creation'],
-    blocks: [],
-    related: ['skylake'],
-  },
 ];
 
 export const featuredSlugs = ['opal', 'silkea', 'icz-591', 'medtech', 'huletts'];

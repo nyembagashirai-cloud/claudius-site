@@ -106,8 +106,7 @@ export const capabilities: Capability[] = [
 export const clients = [
   'OPAL', 'MEDTECH GROUP', 'HULETTS', 'SILKÉA', 'INSURANCE COUNCIL OF ZIMBABWE',
   'SANCTUARY INSURANCE', 'AIRDC', 'SKYLAKE BOREHOLE DRILLING', 'INGWEBU',
-  'SHOWER TO SHOWER', 'CLERE', 'SATISKIN', 'CHUIPACK', 'THE CHEESEMAN',
-  'TURTLE FIT', 'CLOUDS TO YOU',
+  'SHOWER TO SHOWER', 'CLERE', 'SATISKIN', 'CHUIPACK',
 ];
 
 export const contactNeeds = [
